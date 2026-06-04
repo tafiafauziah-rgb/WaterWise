@@ -6,13 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WaterWise
+namespace WaterWise.Models
 {
-    public partial class AdminForm : Form
+    public partial class KelolaUser : Form
     {
-        public AdminForm()
+        public KelolaUser()
         {
             InitializeComponent();
+        }
+
+        private void KelolaUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,41 +37,41 @@
             btnAmbilAir = new Button();
             btnProfile = new Button();
             panel1 = new Panel();
+            panelProfile = new Panel();
+            panelAmbilAir = new Panel();
+            panelHistory = new Panel();
+            panelKeluhan = new Panel();
+            btnKirim = new Button();
+            textBoxKeluhan = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            lblKeluhan = new Label();
+            dgvHistory = new DataGridView();
+            numericAmbilAir = new NumericUpDown();
+            btnAmbil = new Button();
+            lblInput = new Label();
+            lblSisaLimit = new Label();
+            label1 = new Label();
+            btnEditProfile = new Button();
+            lblStatus = new Label();
+            lblEmail = new Label();
+            lblUsername = new Label();
+            lblNama = new Label();
+            lblTitleProfile = new Label();
             labelSisa = new Label();
             labelLimit = new Label();
             label4 = new Label();
             label3 = new Label();
             lblNamaUser = new Label();
             lblWelcome = new Label();
-            panelProfile = new Panel();
-            lblTitleProfile = new Label();
-            lblNama = new Label();
-            lblUsername = new Label();
-            lblEmail = new Label();
-            lblStatus = new Label();
-            btnEditProfile = new Button();
-            label1 = new Label();
-            lblSisaLimit = new Label();
-            lblInput = new Label();
-            btnAmbil = new Button();
-            panelAmbilAir = new Panel();
-            numericAmbilAir = new NumericUpDown();
-            panelHistory = new Panel();
-            dgvHistory = new DataGridView();
-            panelKeluhan = new Panel();
-            lblKeluhan = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            textBoxKeluhan = new TextBox();
-            btnKirim = new Button();
             panelMenu.SuspendLayout();
             panel1.SuspendLayout();
             panelProfile.SuspendLayout();
             panelAmbilAir.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericAmbilAir).BeginInit();
             panelHistory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvHistory).BeginInit();
             panelKeluhan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvHistory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericAmbilAir).BeginInit();
             SuspendLayout();
             // 
             // panelMenu
@@ -153,6 +153,7 @@
             btnProfile.TabIndex = 0;
             btnProfile.Text = "Profile";
             btnProfile.UseVisualStyleBackColor = true;
+            btnProfile.Click += btnProfile_Click;
             // 
             // panel1
             // 
@@ -169,6 +170,230 @@
             panel1.Size = new Size(662, 450);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint_1;
+            // 
+            // panelProfile
+            // 
+            panelProfile.Controls.Add(panelAmbilAir);
+            panelProfile.Controls.Add(btnEditProfile);
+            panelProfile.Controls.Add(lblStatus);
+            panelProfile.Controls.Add(lblEmail);
+            panelProfile.Controls.Add(lblUsername);
+            panelProfile.Controls.Add(lblNama);
+            panelProfile.Controls.Add(lblTitleProfile);
+            panelProfile.Dock = DockStyle.Fill;
+            panelProfile.Location = new Point(0, 0);
+            panelProfile.Name = "panelProfile";
+            panelProfile.Size = new Size(662, 450);
+            panelProfile.TabIndex = 3;
+            panelProfile.Paint += panelProfile_Paint;
+            // 
+            // panelAmbilAir
+            // 
+            panelAmbilAir.Controls.Add(panelHistory);
+            panelAmbilAir.Controls.Add(numericAmbilAir);
+            panelAmbilAir.Controls.Add(btnAmbil);
+            panelAmbilAir.Controls.Add(lblInput);
+            panelAmbilAir.Controls.Add(lblSisaLimit);
+            panelAmbilAir.Controls.Add(label1);
+            panelAmbilAir.Dock = DockStyle.Fill;
+            panelAmbilAir.Location = new Point(0, 0);
+            panelAmbilAir.Name = "panelAmbilAir";
+            panelAmbilAir.Size = new Size(662, 450);
+            panelAmbilAir.TabIndex = 6;
+            panelAmbilAir.Paint += panelAmbilAir_Paint;
+            // 
+            // panelHistory
+            // 
+            panelHistory.Controls.Add(panelKeluhan);
+            panelHistory.Controls.Add(dgvHistory);
+            panelHistory.Dock = DockStyle.Fill;
+            panelHistory.Location = new Point(0, 0);
+            panelHistory.Name = "panelHistory";
+            panelHistory.Size = new Size(662, 450);
+            panelHistory.TabIndex = 0;
+            panelHistory.Paint += panelHistory_Paint;
+            // 
+            // panelKeluhan
+            // 
+            panelKeluhan.Controls.Add(btnKirim);
+            panelKeluhan.Controls.Add(textBoxKeluhan);
+            panelKeluhan.Controls.Add(label6);
+            panelKeluhan.Controls.Add(label5);
+            panelKeluhan.Controls.Add(lblKeluhan);
+            panelKeluhan.Dock = DockStyle.Fill;
+            panelKeluhan.Location = new Point(0, 0);
+            panelKeluhan.Name = "panelKeluhan";
+            panelKeluhan.Size = new Size(662, 450);
+            panelKeluhan.TabIndex = 1;
+            panelKeluhan.Paint += panelKeluhan_Paint;
+            // 
+            // btnKirim
+            // 
+            btnKirim.Location = new Point(543, 385);
+            btnKirim.Name = "btnKirim";
+            btnKirim.Size = new Size(94, 29);
+            btnKirim.TabIndex = 5;
+            btnKirim.Text = "Kirim";
+            btnKirim.UseVisualStyleBackColor = true;
+            // 
+            // textBoxKeluhan
+            // 
+            textBoxKeluhan.Location = new Point(18, 156);
+            textBoxKeluhan.Multiline = true;
+            textBoxKeluhan.Name = "textBoxKeluhan";
+            textBoxKeluhan.Size = new Size(619, 223);
+            textBoxKeluhan.TabIndex = 4;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F);
+            label6.Location = new Point(18, 130);
+            label6.Name = "label6";
+            label6.Size = new Size(81, 20);
+            label6.TabIndex = 3;
+            label6.Text = "Isi keluhan:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F);
+            label5.Location = new Point(18, 87);
+            label5.Name = "label5";
+            label5.Size = new Size(200, 20);
+            label5.TabIndex = 2;
+            label5.Text = "Beri tahu kami masalah anda";
+            // 
+            // lblKeluhan
+            // 
+            lblKeluhan.AutoSize = true;
+            lblKeluhan.Font = new Font("Segoe UI", 18F);
+            lblKeluhan.Location = new Point(225, 36);
+            lblKeluhan.Name = "lblKeluhan";
+            lblKeluhan.Size = new Size(207, 41);
+            lblKeluhan.TabIndex = 1;
+            lblKeluhan.Text = "Lapor Keluhan";
+            // 
+            // dgvHistory
+            // 
+            dgvHistory.AllowUserToAddRows = false;
+            dgvHistory.AllowUserToOrderColumns = true;
+            dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHistory.BackgroundColor = SystemColors.ControlLight;
+            dgvHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHistory.Dock = DockStyle.Fill;
+            dgvHistory.Location = new Point(0, 0);
+            dgvHistory.Name = "dgvHistory";
+            dgvHistory.ReadOnly = true;
+            dgvHistory.RowHeadersWidth = 51;
+            dgvHistory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvHistory.Size = new Size(662, 450);
+            dgvHistory.TabIndex = 0;
+            // 
+            // numericAmbilAir
+            // 
+            numericAmbilAir.Location = new Point(247, 131);
+            numericAmbilAir.Name = "numericAmbilAir";
+            numericAmbilAir.Size = new Size(150, 27);
+            numericAmbilAir.TabIndex = 0;
+            // 
+            // btnAmbil
+            // 
+            btnAmbil.Location = new Point(275, 358);
+            btnAmbil.Name = "btnAmbil";
+            btnAmbil.Size = new Size(94, 29);
+            btnAmbil.TabIndex = 5;
+            btnAmbil.Text = "Ambil";
+            btnAmbil.UseVisualStyleBackColor = true;
+            // 
+            // lblInput
+            // 
+            lblInput.AutoSize = true;
+            lblInput.Font = new Font("Segoe UI", 9F);
+            lblInput.Location = new Point(27, 133);
+            lblInput.Name = "lblInput";
+            lblInput.Size = new Size(207, 20);
+            lblInput.TabIndex = 3;
+            lblInput.Text = "Jumlah air yang mau diambil :";
+            // 
+            // lblSisaLimit
+            // 
+            lblSisaLimit.AutoSize = true;
+            lblSisaLimit.Font = new Font("Segoe UI", 9F);
+            lblSisaLimit.Location = new Point(27, 98);
+            lblSisaLimit.Name = "lblSisaLimit";
+            lblSisaLimit.Size = new Size(72, 20);
+            lblSisaLimit.TabIndex = 2;
+            lblSisaLimit.Text = "Sisa Limit";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F);
+            label1.Location = new Point(247, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(139, 41);
+            label1.TabIndex = 1;
+            label1.Text = "Ambil Air";
+            // 
+            // btnEditProfile
+            // 
+            btnEditProfile.Location = new Point(275, 374);
+            btnEditProfile.Name = "btnEditProfile";
+            btnEditProfile.Size = new Size(94, 29);
+            btnEditProfile.TabIndex = 5;
+            btnEditProfile.Text = "Edit Profile";
+            btnEditProfile.UseVisualStyleBackColor = true;
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Segoe UI", 9F);
+            lblStatus.Location = new Point(27, 208);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(86, 20);
+            lblStatus.TabIndex = 4;
+            lblStatus.Text = "Status Akun";
+            // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI", 9F);
+            lblEmail.Location = new Point(27, 173);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(46, 20);
+            lblEmail.TabIndex = 3;
+            lblEmail.Text = "Email";
+            // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Segoe UI", 9F);
+            lblUsername.Location = new Point(27, 133);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(75, 20);
+            lblUsername.TabIndex = 2;
+            lblUsername.Text = "Username";
+            // 
+            // lblNama
+            // 
+            lblNama.AutoSize = true;
+            lblNama.Font = new Font("Segoe UI", 9F);
+            lblNama.Location = new Point(27, 98);
+            lblNama.Name = "lblNama";
+            lblNama.Size = new Size(116, 20);
+            lblNama.TabIndex = 1;
+            lblNama.Text = "Nama Lengkap :";
+            // 
+            // lblTitleProfile
+            // 
+            lblTitleProfile.AutoSize = true;
+            lblTitleProfile.Font = new Font("Segoe UI", 18F);
+            lblTitleProfile.Location = new Point(211, 35);
+            lblTitleProfile.Name = "lblTitleProfile";
+            lblTitleProfile.Size = new Size(206, 41);
+            lblTitleProfile.TabIndex = 0;
+            lblTitleProfile.Text = "PROFILE USER";
             // 
             // labelSisa
             // 
@@ -227,230 +452,6 @@
             lblWelcome.TabIndex = 0;
             lblWelcome.Text = "Selamat Datang di WaterWise";
             // 
-            // panelProfile
-            // 
-            panelProfile.Controls.Add(panelAmbilAir);
-            panelProfile.Controls.Add(btnEditProfile);
-            panelProfile.Controls.Add(lblStatus);
-            panelProfile.Controls.Add(lblEmail);
-            panelProfile.Controls.Add(lblUsername);
-            panelProfile.Controls.Add(lblNama);
-            panelProfile.Controls.Add(lblTitleProfile);
-            panelProfile.Dock = DockStyle.Fill;
-            panelProfile.Location = new Point(0, 0);
-            panelProfile.Name = "panelProfile";
-            panelProfile.Size = new Size(662, 450);
-            panelProfile.TabIndex = 3;
-            panelProfile.Paint += panelProfile_Paint;
-            // 
-            // lblTitleProfile
-            // 
-            lblTitleProfile.AutoSize = true;
-            lblTitleProfile.Font = new Font("Segoe UI", 18F);
-            lblTitleProfile.Location = new Point(211, 35);
-            lblTitleProfile.Name = "lblTitleProfile";
-            lblTitleProfile.Size = new Size(206, 41);
-            lblTitleProfile.TabIndex = 0;
-            lblTitleProfile.Text = "PROFILE USER";
-            // 
-            // lblNama
-            // 
-            lblNama.AutoSize = true;
-            lblNama.Font = new Font("Segoe UI", 9F);
-            lblNama.Location = new Point(27, 98);
-            lblNama.Name = "lblNama";
-            lblNama.Size = new Size(116, 20);
-            lblNama.TabIndex = 1;
-            lblNama.Text = "Nama Lengkap :";
-            // 
-            // lblUsername
-            // 
-            lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Segoe UI", 9F);
-            lblUsername.Location = new Point(27, 133);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(75, 20);
-            lblUsername.TabIndex = 2;
-            lblUsername.Text = "Username";
-            // 
-            // lblEmail
-            // 
-            lblEmail.AutoSize = true;
-            lblEmail.Font = new Font("Segoe UI", 9F);
-            lblEmail.Location = new Point(27, 173);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(46, 20);
-            lblEmail.TabIndex = 3;
-            lblEmail.Text = "Email";
-            // 
-            // lblStatus
-            // 
-            lblStatus.AutoSize = true;
-            lblStatus.Font = new Font("Segoe UI", 9F);
-            lblStatus.Location = new Point(27, 208);
-            lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(86, 20);
-            lblStatus.TabIndex = 4;
-            lblStatus.Text = "Status Akun";
-            // 
-            // btnEditProfile
-            // 
-            btnEditProfile.Location = new Point(275, 374);
-            btnEditProfile.Name = "btnEditProfile";
-            btnEditProfile.Size = new Size(94, 29);
-            btnEditProfile.TabIndex = 5;
-            btnEditProfile.Text = "Edit Profile";
-            btnEditProfile.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F);
-            label1.Location = new Point(247, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(139, 41);
-            label1.TabIndex = 1;
-            label1.Text = "Ambil Air";
-            // 
-            // lblSisaLimit
-            // 
-            lblSisaLimit.AutoSize = true;
-            lblSisaLimit.Font = new Font("Segoe UI", 9F);
-            lblSisaLimit.Location = new Point(27, 98);
-            lblSisaLimit.Name = "lblSisaLimit";
-            lblSisaLimit.Size = new Size(72, 20);
-            lblSisaLimit.TabIndex = 2;
-            lblSisaLimit.Text = "Sisa Limit";
-            // 
-            // lblInput
-            // 
-            lblInput.AutoSize = true;
-            lblInput.Font = new Font("Segoe UI", 9F);
-            lblInput.Location = new Point(27, 133);
-            lblInput.Name = "lblInput";
-            lblInput.Size = new Size(207, 20);
-            lblInput.TabIndex = 3;
-            lblInput.Text = "Jumlah air yang mau diambil :";
-            // 
-            // btnAmbil
-            // 
-            btnAmbil.Location = new Point(275, 358);
-            btnAmbil.Name = "btnAmbil";
-            btnAmbil.Size = new Size(94, 29);
-            btnAmbil.TabIndex = 5;
-            btnAmbil.Text = "Ambil";
-            btnAmbil.UseVisualStyleBackColor = true;
-            // 
-            // panelAmbilAir
-            // 
-            panelAmbilAir.Controls.Add(panelHistory);
-            panelAmbilAir.Controls.Add(numericAmbilAir);
-            panelAmbilAir.Controls.Add(btnAmbil);
-            panelAmbilAir.Controls.Add(lblInput);
-            panelAmbilAir.Controls.Add(lblSisaLimit);
-            panelAmbilAir.Controls.Add(label1);
-            panelAmbilAir.Dock = DockStyle.Fill;
-            panelAmbilAir.Location = new Point(0, 0);
-            panelAmbilAir.Name = "panelAmbilAir";
-            panelAmbilAir.Size = new Size(662, 450);
-            panelAmbilAir.TabIndex = 6;
-            panelAmbilAir.Paint += panelAmbilAir_Paint;
-            // 
-            // numericAmbilAir
-            // 
-            numericAmbilAir.Location = new Point(247, 131);
-            numericAmbilAir.Name = "numericAmbilAir";
-            numericAmbilAir.Size = new Size(150, 27);
-            numericAmbilAir.TabIndex = 0;
-            // 
-            // panelHistory
-            // 
-            panelHistory.Controls.Add(panelKeluhan);
-            panelHistory.Controls.Add(dgvHistory);
-            panelHistory.Dock = DockStyle.Fill;
-            panelHistory.Location = new Point(0, 0);
-            panelHistory.Name = "panelHistory";
-            panelHistory.Size = new Size(662, 450);
-            panelHistory.TabIndex = 0;
-            panelHistory.Paint += panelHistory_Paint;
-            // 
-            // dgvHistory
-            // 
-            dgvHistory.AllowUserToAddRows = false;
-            dgvHistory.AllowUserToOrderColumns = true;
-            dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvHistory.BackgroundColor = SystemColors.ControlLight;
-            dgvHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHistory.Dock = DockStyle.Fill;
-            dgvHistory.Location = new Point(0, 0);
-            dgvHistory.Name = "dgvHistory";
-            dgvHistory.ReadOnly = true;
-            dgvHistory.RowHeadersWidth = 51;
-            dgvHistory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvHistory.Size = new Size(662, 450);
-            dgvHistory.TabIndex = 0;
-            // 
-            // panelKeluhan
-            // 
-            panelKeluhan.Controls.Add(btnKirim);
-            panelKeluhan.Controls.Add(textBoxKeluhan);
-            panelKeluhan.Controls.Add(label6);
-            panelKeluhan.Controls.Add(label5);
-            panelKeluhan.Controls.Add(lblKeluhan);
-            panelKeluhan.Dock = DockStyle.Fill;
-            panelKeluhan.Location = new Point(0, 0);
-            panelKeluhan.Name = "panelKeluhan";
-            panelKeluhan.Size = new Size(662, 450);
-            panelKeluhan.TabIndex = 1;
-            panelKeluhan.Paint += panelKeluhan_Paint;
-            // 
-            // lblKeluhan
-            // 
-            lblKeluhan.AutoSize = true;
-            lblKeluhan.Font = new Font("Segoe UI", 18F);
-            lblKeluhan.Location = new Point(225, 36);
-            lblKeluhan.Name = "lblKeluhan";
-            lblKeluhan.Size = new Size(207, 41);
-            lblKeluhan.TabIndex = 1;
-            lblKeluhan.Text = "Lapor Keluhan";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F);
-            label5.Location = new Point(18, 87);
-            label5.Name = "label5";
-            label5.Size = new Size(200, 20);
-            label5.TabIndex = 2;
-            label5.Text = "Beri tahu kami masalah anda";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9F);
-            label6.Location = new Point(18, 130);
-            label6.Name = "label6";
-            label6.Size = new Size(81, 20);
-            label6.TabIndex = 3;
-            label6.Text = "Isi keluhan:";
-            // 
-            // textBoxKeluhan
-            // 
-            textBoxKeluhan.Location = new Point(18, 156);
-            textBoxKeluhan.Multiline = true;
-            textBoxKeluhan.Name = "textBoxKeluhan";
-            textBoxKeluhan.Size = new Size(619, 223);
-            textBoxKeluhan.TabIndex = 4;
-            // 
-            // btnKirim
-            // 
-            btnKirim.Location = new Point(543, 385);
-            btnKirim.Name = "btnKirim";
-            btnKirim.Size = new Size(94, 29);
-            btnKirim.TabIndex = 5;
-            btnKirim.Text = "Kirim";
-            btnKirim.UseVisualStyleBackColor = true;
-            // 
             // UserForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -468,11 +469,11 @@
             panelProfile.PerformLayout();
             panelAmbilAir.ResumeLayout(false);
             panelAmbilAir.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericAmbilAir).EndInit();
             panelHistory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvHistory).EndInit();
             panelKeluhan.ResumeLayout(false);
             panelKeluhan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvHistory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericAmbilAir).EndInit();
             ResumeLayout(false);
         }
 

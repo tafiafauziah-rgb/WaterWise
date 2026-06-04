@@ -34,7 +34,7 @@
             txtPassword = new TextBox();
             btnLogin = new Button();
             WaterWise = new Label();
-            button1 = new Button();
+            btnRegistrasi = new Button();
             SuspendLayout();
             // 
             // label1
@@ -80,6 +80,7 @@
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // WaterWise
             // 
@@ -93,22 +94,21 @@
             WaterWise.Text = "WaterWise";
             WaterWise.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnRegistrasi
             // 
-            button1.Location = new Point(315, 301);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 7;
-            button1.Text = "Registrasi";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += this.button1_Click;
+            btnRegistrasi.Location = new Point(315, 301);
+            btnRegistrasi.Name = "btnRegistrasi";
+            btnRegistrasi.Size = new Size(94, 29);
+            btnRegistrasi.TabIndex = 7;
+            btnRegistrasi.Text = "Registrasi";
+            btnRegistrasi.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(780, 467);
+            Controls.Add(btnRegistrasi);
             Controls.Add(WaterWise);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
@@ -130,6 +130,6 @@
         private TextBox txtPassword;
         private Button btnLogin;
         private Label WaterWise;
-        private Button button1;
+        private Button btnRegistrasi;
     }
 }

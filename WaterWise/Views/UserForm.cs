@@ -54,5 +54,12 @@ namespace WaterWise
         {
 
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }

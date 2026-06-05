@@ -43,7 +43,7 @@ namespace WaterWise.Views
             // Minimal implementation to avoid side effects.
             // Replace with real logic for "Ubah Limit" as needed.
             MessageBox.Show("Ubah Limit clicked.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
         }
 
 
@@ -53,8 +53,23 @@ namespace WaterWise.Views
                 // Minimal implementation to avoid side effects.
                 // Replace with real logic for "Ubah Limit" as needed.
                 MessageBox.Show("Ubah Limit clicked.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
             }
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnlihatdata_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

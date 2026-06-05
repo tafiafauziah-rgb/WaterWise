@@ -32,9 +32,7 @@
             panel4 = new Panel();
             dateTimePicker1 = new DateTimePicker();
             textBox3 = new TextBox();
-            textBox2 = new TextBox();
             textBox1 = new TextBox();
-            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -49,6 +47,7 @@
             btnEditProfil = new Button();
             label1 = new Label();
             panel3 = new Panel();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -65,11 +64,10 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(button1);
             panel4.Controls.Add(dateTimePicker1);
             panel4.Controls.Add(textBox3);
-            panel4.Controls.Add(textBox2);
             panel4.Controls.Add(textBox1);
-            panel4.Controls.Add(label6);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(label3);
@@ -81,41 +79,24 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(160, 157);
+            dateTimePicker1.Location = new Point(248, 152);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(396, 27);
+            dateTimePicker1.Size = new Size(259, 27);
             dateTimePicker1.TabIndex = 33;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(158, 206);
+            textBox3.Location = new Point(248, 206);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(398, 27);
+            textBox3.Size = new Size(308, 27);
             textBox3.TabIndex = 32;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(158, 243);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(398, 27);
-            textBox2.TabIndex = 31;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(158, 103);
+            textBox1.Location = new Point(248, 103);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(398, 27);
+            textBox1.Size = new Size(308, 27);
             textBox1.TabIndex = 30;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(34, 247);
-            label6.Name = "label6";
-            label6.Size = new Size(102, 23);
-            label6.TabIndex = 29;
-            label6.Text = "Keterangan:";
             // 
             // label5
             // 
@@ -123,9 +104,9 @@
             label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(34, 210);
             label5.Name = "label5";
-            label5.Size = new Size(77, 23);
+            label5.Size = new Size(205, 23);
             label5.TabIndex = 28;
-            label5.Text = "Aktivitas:";
+            label5.Text = "Jumlah Penggunaan Air : ";
             // 
             // label4
             // 
@@ -133,9 +114,10 @@
             label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(34, 156);
             label4.Name = "label4";
-            label4.Size = new Size(73, 23);
+            label4.Size = new Size(208, 23);
             label4.TabIndex = 27;
-            label4.Text = "Tanggal:";
+            label4.Text = "Tanggal Pengambilan Air :";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -153,9 +135,9 @@
             label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(34, 21);
             label2.Name = "label2";
-            label2.Size = new Size(237, 38);
+            label2.Size = new Size(141, 38);
             label2.TabIndex = 25;
-            label2.Text = "History Pengguna";
+            label2.Text = "Lihat Data";
             // 
             // panel2
             // 
@@ -254,6 +236,15 @@
             panel3.Size = new Size(597, 446);
             panel3.TabIndex = 2;
             // 
+            // button1
+            // 
+            button1.Location = new Point(462, 367);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 34;
+            button1.Text = "Simpan";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Lihatdata
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -277,9 +268,7 @@
         private Panel panel4;
         private DateTimePicker dateTimePicker1;
         private TextBox textBox3;
-        private TextBox textBox2;
         private TextBox textBox1;
-        private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -294,5 +283,6 @@
         private Button btnEditProfil;
         private Label label1;
         private Panel panel3;
+        private Button button1;
     }
 }

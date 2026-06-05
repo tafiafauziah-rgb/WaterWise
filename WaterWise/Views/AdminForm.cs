@@ -189,5 +189,45 @@ namespace WaterWise
         {
             SwicthHistoryPengguna();
         }
+
+        private void AdminForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlihatkeluhan_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btneditprofile_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnlihatdata_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlogout_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

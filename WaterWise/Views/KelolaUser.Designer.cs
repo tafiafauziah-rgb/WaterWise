@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            panel4 = new Panel();
+            textBox3 = new TextBox();
+            textBox1 = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             panel2 = new Panel();
             btnLogOut = new Button();
             btnHistoryPengguna = new Button();
@@ -39,19 +46,11 @@
             btnEditProfil = new Button();
             label1 = new Label();
             panel3 = new Panel();
-            panel4 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
+            Aktif = new CheckedListBox();
+            Nonaktif = new CheckedListBox();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             panel4.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -62,6 +61,75 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(794, 449);
             panel1.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(Nonaktif);
+            panel4.Controls.Add(Aktif);
+            panel4.Controls.Add(textBox3);
+            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(label5);
+            panel4.Controls.Add(label4);
+            panel4.Controls.Add(label3);
+            panel4.Controls.Add(label2);
+            panel4.Location = new Point(198, 4);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(596, 445);
+            panel4.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(158, 152);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(398, 27);
+            textBox3.TabIndex = 32;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(158, 103);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(398, 27);
+            textBox1.TabIndex = 30;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(34, 210);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 23);
+            label5.TabIndex = 28;
+            label5.Text = "Status : ";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(34, 156);
+            label4.Name = "label4";
+            label4.Size = new Size(101, 23);
+            label4.TabIndex = 27;
+            label4.Text = "Username : ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(34, 103);
+            label3.Name = "label3";
+            label3.Size = new Size(60, 23);
+            label3.TabIndex = 26;
+            label3.Text = "Nama:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(34, 21);
+            label2.Name = "label2";
+            label2.Size = new Size(156, 38);
+            label2.TabIndex = 25;
+            label2.Text = "Kelola User";
             // 
             // panel2
             // 
@@ -159,99 +227,21 @@
             panel3.Size = new Size(597, 446);
             panel3.TabIndex = 2;
             // 
-            // panel4
+            // Aktif
             // 
-            panel4.Controls.Add(dateTimePicker1);
-            panel4.Controls.Add(textBox3);
-            panel4.Controls.Add(textBox2);
-            panel4.Controls.Add(textBox1);
-            panel4.Controls.Add(label6);
-            panel4.Controls.Add(label5);
-            panel4.Controls.Add(label4);
-            panel4.Controls.Add(label3);
-            panel4.Controls.Add(label2);
-            panel4.Location = new Point(198, 4);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(596, 445);
-            panel4.TabIndex = 2;
+            Aktif.FormattingEnabled = true;
+            Aktif.Location = new Point(158, 210);
+            Aktif.Name = "Aktif";
+            Aktif.Size = new Size(105, 26);
+            Aktif.TabIndex = 33;
             // 
-            // dateTimePicker1
+            // Nonaktif
             // 
-            dateTimePicker1.Location = new Point(160, 157);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(396, 27);
-            dateTimePicker1.TabIndex = 33;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(158, 206);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(398, 27);
-            textBox3.TabIndex = 32;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(158, 243);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(398, 27);
-            textBox2.TabIndex = 31;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(158, 103);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(398, 27);
-            textBox1.TabIndex = 30;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(34, 247);
-            label6.Name = "label6";
-            label6.Size = new Size(102, 23);
-            label6.TabIndex = 29;
-            label6.Text = "Keterangan:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(34, 210);
-            label5.Name = "label5";
-            label5.Size = new Size(77, 23);
-            label5.TabIndex = 28;
-            label5.Text = "Aktivitas:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(34, 156);
-            label4.Name = "label4";
-            label4.Size = new Size(73, 23);
-            label4.TabIndex = 27;
-            label4.Text = "Tanggal:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(34, 103);
-            label3.Name = "label3";
-            label3.Size = new Size(60, 23);
-            label3.TabIndex = 26;
-            label3.Text = "Nama:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(34, 21);
-            label2.Name = "label2";
-            label2.Size = new Size(237, 38);
-            label2.TabIndex = 25;
-            label2.Text = "History Pengguna";
+            Nonaktif.FormattingEnabled = true;
+            Nonaktif.Location = new Point(341, 210);
+            Nonaktif.Name = "Nonaktif";
+            Nonaktif.Size = new Size(105, 26);
+            Nonaktif.TabIndex = 34;
             // 
             // KelolaUser
             // 
@@ -262,10 +252,10 @@
             Name = "KelolaUser";
             Text = "KelolaUser";
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -283,14 +273,13 @@
         private Label label1;
         private Panel panel3;
         private Panel panel4;
-        private DateTimePicker dateTimePicker1;
         private TextBox textBox3;
-        private TextBox textBox2;
         private TextBox textBox1;
-        private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
+        private CheckedListBox Nonaktif;
+        private CheckedListBox Aktif;
     }
 }

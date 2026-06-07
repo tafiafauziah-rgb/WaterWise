@@ -28,222 +28,150 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lihatdata));
             panel1 = new Panel();
-            panel4 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
-            textBox3 = new TextBox();
-            textBox1 = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
             panel2 = new Panel();
-            btnLogOut = new Button();
-            btnHistoryPengguna = new Button();
-            btnLihatData = new Button();
-            btnUbahLimit = new Button();
-            btnLihatKeluhan = new Button();
-            btnKelolaUser = new Button();
-            btnEditProfil = new Button();
-            label1 = new Label();
             panel3 = new Panel();
-            button1 = new Button();
+            button2 = new Button();
+            btnlogout = new Button();
+            btnhistory = new Button();
+            btnlihatdata = new Button();
+            btnubahlimit = new Button();
+            btnlihatkeluhan = new Button();
+            btnkelolauser = new Button();
+            btneditprofile = new Button();
             panel1.SuspendLayout();
-            panel4.SuspendLayout();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(panel4);
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnlogout);
+            panel1.Controls.Add(btnhistory);
+            panel1.Controls.Add(btnlihatdata);
+            panel1.Controls.Add(btnubahlimit);
+            panel1.Controls.Add(btnlihatkeluhan);
+            panel1.Controls.Add(btnkelolauser);
+            panel1.Controls.Add(btneditprofile);
+            panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(3, 1);
+            panel1.Location = new Point(-9, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(794, 449);
+            panel1.Size = new Size(814, 449);
             panel1.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(button1);
-            panel4.Controls.Add(dateTimePicker1);
-            panel4.Controls.Add(textBox3);
-            panel4.Controls.Add(textBox1);
-            panel4.Controls.Add(label5);
-            panel4.Controls.Add(label4);
-            panel4.Controls.Add(label3);
-            panel4.Controls.Add(label2);
-            panel4.Location = new Point(198, 4);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(596, 445);
-            panel4.TabIndex = 2;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(248, 152);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(259, 27);
-            dateTimePicker1.TabIndex = 33;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(248, 206);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(308, 27);
-            textBox3.TabIndex = 32;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(248, 103);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(308, 27);
-            textBox1.TabIndex = 30;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(34, 210);
-            label5.Name = "label5";
-            label5.Size = new Size(205, 23);
-            label5.TabIndex = 28;
-            label5.Text = "Jumlah Penggunaan Air : ";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(34, 156);
-            label4.Name = "label4";
-            label4.Size = new Size(208, 23);
-            label4.TabIndex = 27;
-            label4.Text = "Tanggal Pengambilan Air :";
-            label4.Click += label4_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(34, 103);
-            label3.Name = "label3";
-            label3.Size = new Size(60, 23);
-            label3.TabIndex = 26;
-            label3.Text = "Nama:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(34, 21);
-            label2.Name = "label2";
-            label2.Size = new Size(141, 38);
-            label2.TabIndex = 25;
-            label2.Text = "Lihat Data";
             // 
             // panel2
             // 
-            panel2.Controls.Add(btnLogOut);
-            panel2.Controls.Add(btnHistoryPengguna);
-            panel2.Controls.Add(btnLihatData);
-            panel2.Controls.Add(btnUbahLimit);
-            panel2.Controls.Add(btnLihatKeluhan);
-            panel2.Controls.Add(btnKelolaUser);
-            panel2.Controls.Add(btnEditProfil);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(panel3);
-            panel2.Location = new Point(0, 3);
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.Location = new Point(192, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(198, 443);
-            panel2.TabIndex = 1;
-            // 
-            // btnLogOut
-            // 
-            btnLogOut.Location = new Point(46, 395);
-            btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(94, 29);
-            btnLogOut.TabIndex = 15;
-            btnLogOut.Text = "Logout";
-            btnLogOut.UseVisualStyleBackColor = true;
-            // 
-            // btnHistoryPengguna
-            // 
-            btnHistoryPengguna.Location = new Point(22, 277);
-            btnHistoryPengguna.Name = "btnHistoryPengguna";
-            btnHistoryPengguna.Size = new Size(154, 29);
-            btnHistoryPengguna.TabIndex = 14;
-            btnHistoryPengguna.Text = "History Pengguna";
-            btnHistoryPengguna.UseVisualStyleBackColor = true;
-            // 
-            // btnLihatData
-            // 
-            btnLihatData.Location = new Point(46, 242);
-            btnLihatData.Name = "btnLihatData";
-            btnLihatData.Size = new Size(94, 29);
-            btnLihatData.TabIndex = 13;
-            btnLihatData.Text = "Lihat Data";
-            btnLihatData.UseVisualStyleBackColor = true;
-            // 
-            // btnUbahLimit
-            // 
-            btnUbahLimit.Location = new Point(46, 207);
-            btnUbahLimit.Name = "btnUbahLimit";
-            btnUbahLimit.Size = new Size(94, 29);
-            btnUbahLimit.TabIndex = 12;
-            btnUbahLimit.Text = "Ubah Limit";
-            btnUbahLimit.UseVisualStyleBackColor = true;
-            // 
-            // btnLihatKeluhan
-            // 
-            btnLihatKeluhan.Location = new Point(36, 172);
-            btnLihatKeluhan.Name = "btnLihatKeluhan";
-            btnLihatKeluhan.Size = new Size(115, 29);
-            btnLihatKeluhan.TabIndex = 11;
-            btnLihatKeluhan.Text = "Lihat Keluhan";
-            btnLihatKeluhan.UseVisualStyleBackColor = true;
-            btnLihatKeluhan.Click += btnLihatKeluhan_Click;
-            // 
-            // btnKelolaUser
-            // 
-            btnKelolaUser.Location = new Point(46, 137);
-            btnKelolaUser.Name = "btnKelolaUser";
-            btnKelolaUser.Size = new Size(94, 29);
-            btnKelolaUser.TabIndex = 10;
-            btnKelolaUser.Text = "Kelola User";
-            btnKelolaUser.UseVisualStyleBackColor = true;
-            // 
-            // btnEditProfil
-            // 
-            btnEditProfil.Location = new Point(46, 102);
-            btnEditProfil.Name = "btnEditProfil";
-            btnEditProfil.Size = new Size(94, 29);
-            btnEditProfil.TabIndex = 9;
-            btnEditProfil.Text = "Edit Profil";
-            btnEditProfil.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(51, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(89, 38);
-            label1.TabIndex = 8;
-            label1.Text = "Menu";
+            panel2.Size = new Size(619, 60);
+            panel2.TabIndex = 0;
             // 
             // panel3
             // 
-            panel3.Location = new Point(194, 0);
+            panel3.Location = new Point(192, 65);
             panel3.Name = "panel3";
-            panel3.Size = new Size(597, 446);
-            panel3.TabIndex = 2;
+            panel3.Size = new Size(619, 381);
+            panel3.TabIndex = 1;
             // 
-            // button1
+            // button2
             // 
-            button1.Location = new Point(462, 367);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 34;
-            button1.Text = "Simpan";
-            button1.UseVisualStyleBackColor = true;
+            button2.BackColor = Color.Transparent;
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(39, 135);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 29);
+            button2.TabIndex = 37;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // btnlogout
+            // 
+            btnlogout.BackColor = Color.Transparent;
+            btnlogout.BackgroundImage = (Image)resources.GetObject("btnlogout.BackgroundImage");
+            btnlogout.FlatAppearance.BorderSize = 0;
+            btnlogout.FlatStyle = FlatStyle.Flat;
+            btnlogout.Location = new Point(17, 396);
+            btnlogout.Name = "btnlogout";
+            btnlogout.Size = new Size(169, 41);
+            btnlogout.TabIndex = 44;
+            btnlogout.UseVisualStyleBackColor = false;
+            // 
+            // btnhistory
+            // 
+            btnhistory.BackColor = Color.Transparent;
+            btnhistory.BackgroundImage = (Image)resources.GetObject("btnhistory.BackgroundImage");
+            btnhistory.FlatAppearance.BorderSize = 0;
+            btnhistory.FlatStyle = FlatStyle.Flat;
+            btnhistory.Location = new Point(21, 301);
+            btnhistory.Name = "btnhistory";
+            btnhistory.Size = new Size(151, 31);
+            btnhistory.TabIndex = 43;
+            btnhistory.UseVisualStyleBackColor = false;
+            // 
+            // btnlihatdata
+            // 
+            btnlihatdata.BackColor = Color.Transparent;
+            btnlihatdata.BackgroundImage = (Image)resources.GetObject("btnlihatdata.BackgroundImage");
+            btnlihatdata.FlatAppearance.BorderSize = 0;
+            btnlihatdata.FlatStyle = FlatStyle.Flat;
+            btnlihatdata.Location = new Point(37, 275);
+            btnlihatdata.Name = "btnlihatdata";
+            btnlihatdata.Size = new Size(114, 29);
+            btnlihatdata.TabIndex = 42;
+            btnlihatdata.UseVisualStyleBackColor = false;
+            // 
+            // btnubahlimit
+            // 
+            btnubahlimit.BackColor = Color.Transparent;
+            btnubahlimit.BackgroundImage = (Image)resources.GetObject("btnubahlimit.BackgroundImage");
+            btnubahlimit.FlatAppearance.BorderSize = 0;
+            btnubahlimit.FlatStyle = FlatStyle.Flat;
+            btnubahlimit.Location = new Point(39, 205);
+            btnubahlimit.Name = "btnubahlimit";
+            btnubahlimit.Size = new Size(114, 29);
+            btnubahlimit.TabIndex = 41;
+            btnubahlimit.UseVisualStyleBackColor = false;
+            // 
+            // btnlihatkeluhan
+            // 
+            btnlihatkeluhan.BackColor = Color.Transparent;
+            btnlihatkeluhan.BackgroundImage = (Image)resources.GetObject("btnlihatkeluhan.BackgroundImage");
+            btnlihatkeluhan.FlatAppearance.BorderSize = 0;
+            btnlihatkeluhan.FlatStyle = FlatStyle.Flat;
+            btnlihatkeluhan.Location = new Point(37, 170);
+            btnlihatkeluhan.Name = "btnlihatkeluhan";
+            btnlihatkeluhan.Size = new Size(114, 29);
+            btnlihatkeluhan.TabIndex = 39;
+            btnlihatkeluhan.UseVisualStyleBackColor = false;
+            // 
+            // btnkelolauser
+            // 
+            btnkelolauser.BackColor = Color.Transparent;
+            btnkelolauser.BackgroundImage = (Image)resources.GetObject("btnkelolauser.BackgroundImage");
+            btnkelolauser.FlatAppearance.BorderSize = 0;
+            btnkelolauser.FlatStyle = FlatStyle.Flat;
+            btnkelolauser.Location = new Point(39, 240);
+            btnkelolauser.Name = "btnkelolauser";
+            btnkelolauser.Size = new Size(118, 29);
+            btnkelolauser.TabIndex = 40;
+            btnkelolauser.UseVisualStyleBackColor = false;
+            // 
+            // btneditprofile
+            // 
+            btneditprofile.BackColor = Color.Transparent;
+            btneditprofile.BackgroundImage = (Image)resources.GetObject("btneditprofile.BackgroundImage");
+            btneditprofile.FlatAppearance.BorderSize = 0;
+            btneditprofile.FlatStyle = FlatStyle.Flat;
+            btneditprofile.ImageAlign = ContentAlignment.MiddleLeft;
+            btneditprofile.Location = new Point(39, 100);
+            btneditprofile.Name = "btneditprofile";
+            btneditprofile.Size = new Size(112, 29);
+            btneditprofile.TabIndex = 38;
+            btneditprofile.UseVisualStyleBackColor = false;
             // 
             // Lihatdata
             // 
@@ -255,34 +183,21 @@
             Text = "Lihatdata";
             Load += Lihatdata_Load;
             panel1.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Panel panel4;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox3;
-        private TextBox textBox1;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Panel panel2;
-        private Button btnLogOut;
-        private Button btnHistoryPengguna;
-        private Button btnLihatData;
-        private Button btnUbahLimit;
-        private Button btnLihatKeluhan;
-        private Button btnKelolaUser;
-        private Button btnEditProfil;
-        private Label label1;
         private Panel panel3;
-        private Button button1;
+        private Panel panel2;
+        private Button button2;
+        private Button btnlogout;
+        private Button btnhistory;
+        private Button btnlihatdata;
+        private Button btnubahlimit;
+        private Button btnlihatkeluhan;
+        private Button btnkelolauser;
+        private Button btneditprofile;
     }
 }

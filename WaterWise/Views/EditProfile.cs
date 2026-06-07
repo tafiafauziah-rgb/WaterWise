@@ -91,5 +91,20 @@ namespace WaterWise.Views
         {
 
         }
+
+        private void lblaktif_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbNama_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsimpan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

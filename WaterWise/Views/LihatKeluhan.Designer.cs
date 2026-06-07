@@ -31,11 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LihatKeluhan));
             panel1 = new Panel();
             panel3 = new Panel();
-            panelheader = new Panel();
-            panel2 = new Panel();
-            panel4 = new Panel();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
             button2 = new Button();
             btnlogout = new Button();
             btnhistory = new Button();
@@ -44,6 +39,11 @@
             btnlihatkeluhan = new Button();
             btnkelolauser = new Button();
             btneditprofile = new Button();
+            panelheader = new Panel();
+            panel2 = new Panel();
+            panel4 = new Panel();
+            button1 = new Button();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -77,53 +77,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(812, 445);
             panel3.TabIndex = 12;
-            // 
-            // panelheader
-            // 
-            panelheader.BackgroundImage = (Image)resources.GetObject("panelheader.BackgroundImage");
-            panelheader.Location = new Point(191, 0);
-            panelheader.Name = "panelheader";
-            panelheader.Size = new Size(621, 53);
-            panelheader.TabIndex = 22;
-            // 
-            // panel2
-            // 
-            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
-            panel2.Controls.Add(panel4);
-            panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(191, 53);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(621, 389);
-            panel2.TabIndex = 16;
-            // 
-            // panel4
-            // 
-            panel4.AutoScroll = true;
-            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
-            panel4.Controls.Add(button1);
-            panel4.Location = new Point(320, 142);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(279, 207);
-            panel4.TabIndex = 24;
-            panel4.Paint += panel4_Paint;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(126, 188);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(16, 142);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(288, 217);
-            dataGridView1.TabIndex = 23;
             // 
             // button2
             // 
@@ -221,6 +174,53 @@
             btneditprofile.Size = new Size(112, 29);
             btneditprofile.TabIndex = 30;
             btneditprofile.UseVisualStyleBackColor = false;
+            // 
+            // panelheader
+            // 
+            panelheader.BackgroundImage = (Image)resources.GetObject("panelheader.BackgroundImage");
+            panelheader.Location = new Point(191, 0);
+            panelheader.Name = "panelheader";
+            panelheader.Size = new Size(621, 53);
+            panelheader.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.Controls.Add(panel4);
+            panel2.Controls.Add(dataGridView1);
+            panel2.Location = new Point(191, 53);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(621, 389);
+            panel2.TabIndex = 16;
+            // 
+            // panel4
+            // 
+            panel4.AutoScroll = true;
+            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
+            panel4.Controls.Add(button1);
+            panel4.Location = new Point(319, 142);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(280, 207);
+            panel4.TabIndex = 24;
+            panel4.Paint += panel4_Paint;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(126, 188);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(16, 142);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(288, 217);
+            dataGridView1.TabIndex = 23;
             // 
             // LihatKeluhan
             // 

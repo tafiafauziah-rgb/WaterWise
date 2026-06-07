@@ -74,9 +74,9 @@
             panel3.Controls.Add(tbEmail);
             panel3.Controls.Add(tbUsername);
             panel3.Controls.Add(tbNama);
-            panel3.Location = new Point(172, 51);
+            panel3.Location = new Point(181, 56);
             panel3.Name = "panel3";
-            panel3.Size = new Size(623, 401);
+            panel3.Size = new Size(614, 396);
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
             // 
@@ -89,6 +89,7 @@
             lblaktif.Size = new Size(44, 20);
             lblaktif.TabIndex = 23;
             lblaktif.Text = "value";
+            lblaktif.Click += lblaktif_Click;
             // 
             // btnsimpan
             // 
@@ -100,6 +101,7 @@
             btnsimpan.Size = new Size(575, 25);
             btnsimpan.TabIndex = 21;
             btnsimpan.UseVisualStyleBackColor = false;
+            btnsimpan.Click += btnsimpan_Click;
             // 
             // textBox2
             // 
@@ -148,6 +150,7 @@
             tbNama.Name = "tbNama";
             tbNama.Size = new Size(259, 27);
             tbNama.TabIndex = 16;
+            tbNama.TextChanged += tbNama_TextChanged;
             // 
             // panel2
             // 

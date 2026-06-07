@@ -71,5 +71,25 @@ namespace WaterWise.Views
         {
 
         }
+
+        private void btneditprofile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlihatkeluhan_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnkelolauser_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnhistory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,12 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProfile));
             panel1 = new Panel();
             panel3 = new Panel();
+            lblaktif = new Label();
+            btnsimpan = new Button();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             button1 = new Button();
             tbEmail = new TextBox();
             tbUsername = new TextBox();
             tbNama = new TextBox();
             panel2 = new Panel();
-            panel4 = new Panel();
             button2 = new Button();
             btnlogout = new Button();
             btnhistory = new Button();
@@ -45,10 +48,7 @@
             btnlihatkeluhan = new Button();
             btnkelolauser = new Button();
             btneditprofile = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            btnsimpan = new Button();
-            lblaktif = new Label();
+            panel4 = new Panel();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -79,6 +79,43 @@
             panel3.Size = new Size(623, 401);
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
+            // 
+            // lblaktif
+            // 
+            lblaktif.AutoSize = true;
+            lblaktif.BackColor = Color.Transparent;
+            lblaktif.Location = new Point(69, 103);
+            lblaktif.Name = "lblaktif";
+            lblaktif.Size = new Size(44, 20);
+            lblaktif.TabIndex = 23;
+            lblaktif.Text = "value";
+            // 
+            // btnsimpan
+            // 
+            btnsimpan.BackColor = Color.Transparent;
+            btnsimpan.FlatAppearance.BorderSize = 0;
+            btnsimpan.FlatStyle = FlatStyle.Flat;
+            btnsimpan.Location = new Point(16, 333);
+            btnsimpan.Name = "btnsimpan";
+            btnsimpan.Size = new Size(575, 25);
+            btnsimpan.TabIndex = 21;
+            btnsimpan.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.White;
+            textBox2.Location = new Point(16, 284);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(259, 27);
+            textBox2.TabIndex = 20;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.White;
+            textBox1.Location = new Point(316, 224);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(259, 27);
+            textBox1.TabIndex = 19;
             // 
             // button1
             // 
@@ -124,18 +161,10 @@
             panel2.Controls.Add(btnkelolauser);
             panel2.Controls.Add(btneditprofile);
             panel2.Controls.Add(panel4);
-            panel2.Location = new Point(-18, 0);
+            panel2.Location = new Point(-13, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(813, 451);
+            panel2.Size = new Size(808, 451);
             panel2.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
-            panel4.Location = new Point(191, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(623, 47);
-            panel4.TabIndex = 0;
             // 
             // button2
             // 
@@ -143,7 +172,7 @@
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(37, 119);
+            button2.Location = new Point(33, 119);
             button2.Name = "button2";
             button2.Size = new Size(112, 29);
             button2.TabIndex = 21;
@@ -167,11 +196,12 @@
             btnhistory.BackgroundImage = (Image)resources.GetObject("btnhistory.BackgroundImage");
             btnhistory.FlatAppearance.BorderSize = 0;
             btnhistory.FlatStyle = FlatStyle.Flat;
-            btnhistory.Location = new Point(33, 294);
+            btnhistory.Location = new Point(22, 294);
             btnhistory.Name = "btnhistory";
             btnhistory.Size = new Size(151, 31);
             btnhistory.TabIndex = 27;
             btnhistory.UseVisualStyleBackColor = false;
+            btnhistory.Click += btnhistory_Click;
             // 
             // btnlihatdata
             // 
@@ -179,7 +209,7 @@
             btnlihatdata.BackgroundImage = (Image)resources.GetObject("btnlihatdata.BackgroundImage");
             btnlihatdata.FlatAppearance.BorderSize = 0;
             btnlihatdata.FlatStyle = FlatStyle.Flat;
-            btnlihatdata.Location = new Point(33, 259);
+            btnlihatdata.Location = new Point(37, 259);
             btnlihatdata.Name = "btnlihatdata";
             btnlihatdata.Size = new Size(114, 29);
             btnlihatdata.TabIndex = 26;
@@ -192,7 +222,7 @@
             btnubahlimit.BackgroundImage = (Image)resources.GetObject("btnubahlimit.BackgroundImage");
             btnubahlimit.FlatAppearance.BorderSize = 0;
             btnubahlimit.FlatStyle = FlatStyle.Flat;
-            btnubahlimit.Location = new Point(37, 189);
+            btnubahlimit.Location = new Point(33, 189);
             btnubahlimit.Name = "btnubahlimit";
             btnubahlimit.Size = new Size(114, 29);
             btnubahlimit.TabIndex = 25;
@@ -204,11 +234,12 @@
             btnlihatkeluhan.BackgroundImage = (Image)resources.GetObject("btnlihatkeluhan.BackgroundImage");
             btnlihatkeluhan.FlatAppearance.BorderSize = 0;
             btnlihatkeluhan.FlatStyle = FlatStyle.Flat;
-            btnlihatkeluhan.Location = new Point(37, 154);
+            btnlihatkeluhan.Location = new Point(33, 154);
             btnlihatkeluhan.Name = "btnlihatkeluhan";
             btnlihatkeluhan.Size = new Size(114, 29);
             btnlihatkeluhan.TabIndex = 23;
             btnlihatkeluhan.UseVisualStyleBackColor = false;
+            btnlihatkeluhan.Click += btnlihatkeluhan_Click_1;
             // 
             // btnkelolauser
             // 
@@ -216,11 +247,12 @@
             btnkelolauser.BackgroundImage = (Image)resources.GetObject("btnkelolauser.BackgroundImage");
             btnkelolauser.FlatAppearance.BorderSize = 0;
             btnkelolauser.FlatStyle = FlatStyle.Flat;
-            btnkelolauser.Location = new Point(37, 227);
+            btnkelolauser.Location = new Point(37, 224);
             btnkelolauser.Name = "btnkelolauser";
             btnkelolauser.Size = new Size(118, 29);
             btnkelolauser.TabIndex = 24;
             btnkelolauser.UseVisualStyleBackColor = false;
+            btnkelolauser.Click += btnkelolauser_Click_1;
             // 
             // btneditprofile
             // 
@@ -234,43 +266,15 @@
             btneditprofile.Size = new Size(112, 29);
             btneditprofile.TabIndex = 22;
             btneditprofile.UseVisualStyleBackColor = false;
+            btneditprofile.Click += btneditprofile_Click;
             // 
-            // textBox1
+            // panel4
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.Location = new Point(316, 224);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(259, 27);
-            textBox1.TabIndex = 19;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.White;
-            textBox2.Location = new Point(16, 284);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(259, 27);
-            textBox2.TabIndex = 20;
-            // 
-            // btnsimpan
-            // 
-            btnsimpan.BackColor = Color.Transparent;
-            btnsimpan.FlatAppearance.BorderSize = 0;
-            btnsimpan.FlatStyle = FlatStyle.Flat;
-            btnsimpan.Location = new Point(16, 333);
-            btnsimpan.Name = "btnsimpan";
-            btnsimpan.Size = new Size(575, 25);
-            btnsimpan.TabIndex = 21;
-            btnsimpan.UseVisualStyleBackColor = false;
-            // 
-            // lblaktif
-            // 
-            lblaktif.AutoSize = true;
-            lblaktif.BackColor = Color.Transparent;
-            lblaktif.Location = new Point(69, 103);
-            lblaktif.Name = "lblaktif";
-            lblaktif.Size = new Size(44, 20);
-            lblaktif.TabIndex = 23;
-            lblaktif.Text = "value";
+            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
+            panel4.Location = new Point(191, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(623, 47);
+            panel4.TabIndex = 0;
             // 
             // EditProfile
             // 

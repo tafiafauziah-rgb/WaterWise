@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using WaterWise.Views;
+using WaterWise.Models;
 
 namespace WaterWise.Views
 {
@@ -69,30 +69,40 @@ namespace WaterWise.Views
 
         private void btnlihatdata_Click(object sender, EventArgs e)
         {
-
+            Lihatdata lihatdata = new Lihatdata();
+            lihatdata.Show();
+            this.Hide();
         }
 
-        private void btneditprofile_Click(object sender, EventArgs e)
+        private void btndashboardadmin_Click(object sender, EventArgs e)
         {
-
+            EditProfile editProfile = new EditProfile();
+            editProfile.Show();
+            this.Hide();
         }
 
         private void btnlihatkeluhan_Click_1(object sender, EventArgs e)
         {
-
+            LihatKeluhan lihatkeluhan = new LihatKeluhan();
+            lihatkeluhan.Show();
+            this.Hide();
         }
 
         private void btnkelolauser_Click_1(object sender, EventArgs e)
         {
-
+            KelolaUser kelolauser = new KelolaUser();
+            kelolauser.Show();
+            this.Hide();
         }
 
         private void btnhistory_Click(object sender, EventArgs e)
         {
-
+            HistoryPengguna historypengguna = new HistoryPengguna();
+            historypengguna.Show();
+            this.Hide();
         }
 
-        private void lblaktif_Click(object sender, EventArgs e)
+        private void lblstatusadmin_Click(object sender, EventArgs e)
         {
 
         }
@@ -106,5 +116,26 @@ namespace WaterWise.Views
         {
 
         }
+
+        private void btneditprofileadmin_Click(object sender, EventArgs e)
+        {
+            EditProfile editadmin = new EditProfile();
+            editadmin.Show();
+            this.Hide();
+
+        }
+
+        private void btnubahlimit_Click_1(object sender, EventArgs e)
+        {
+            UbahLimit ubahlimit = new UbahLimit();
+            ubahlimit.Show();
+            this.Hide();
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
+

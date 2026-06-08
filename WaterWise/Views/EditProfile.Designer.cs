@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProfile));
             panel1 = new Panel();
             panel3 = new Panel();
-            lblaktif = new Label();
+            lblstatusadmin = new Label();
             btnsimpan = new Button();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
@@ -40,14 +40,14 @@
             tbUsername = new TextBox();
             tbNama = new TextBox();
             panel2 = new Panel();
-            button2 = new Button();
+            btneditprofileadmin = new Button();
             btnlogout = new Button();
             btnhistory = new Button();
             btnlihatdata = new Button();
             btnubahlimit = new Button();
             btnlihatkeluhan = new Button();
             btnkelolauser = new Button();
-            btneditprofile = new Button();
+            btndashboardadmin = new Button();
             panel4 = new Panel();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -66,7 +66,7 @@
             // panel3
             // 
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
-            panel3.Controls.Add(lblaktif);
+            panel3.Controls.Add(lblstatusadmin);
             panel3.Controls.Add(btnsimpan);
             panel3.Controls.Add(textBox2);
             panel3.Controls.Add(textBox1);
@@ -80,16 +80,16 @@
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
             // 
-            // lblaktif
+            // lblstatusadmin
             // 
-            lblaktif.AutoSize = true;
-            lblaktif.BackColor = Color.Transparent;
-            lblaktif.Location = new Point(69, 103);
-            lblaktif.Name = "lblaktif";
-            lblaktif.Size = new Size(44, 20);
-            lblaktif.TabIndex = 23;
-            lblaktif.Text = "value";
-            lblaktif.Click += lblaktif_Click;
+            lblstatusadmin.AutoSize = true;
+            lblstatusadmin.BackColor = Color.Transparent;
+            lblstatusadmin.Location = new Point(69, 103);
+            lblstatusadmin.Name = "lblstatusadmin";
+            lblstatusadmin.Size = new Size(44, 20);
+            lblstatusadmin.TabIndex = 23;
+            lblstatusadmin.Text = "value";
+            lblstatusadmin.Click += lblstatusadmin_Click;
             // 
             // btnsimpan
             // 
@@ -155,31 +155,32 @@
             // panel2
             // 
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btneditprofileadmin);
             panel2.Controls.Add(btnlogout);
             panel2.Controls.Add(btnhistory);
             panel2.Controls.Add(btnlihatdata);
             panel2.Controls.Add(btnubahlimit);
             panel2.Controls.Add(btnlihatkeluhan);
             panel2.Controls.Add(btnkelolauser);
-            panel2.Controls.Add(btneditprofile);
+            panel2.Controls.Add(btndashboardadmin);
             panel2.Controls.Add(panel4);
             panel2.Location = new Point(-13, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(808, 451);
             panel2.TabIndex = 2;
             // 
-            // button2
+            // btneditprofileadmin
             // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(33, 119);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 29);
-            button2.TabIndex = 21;
-            button2.UseVisualStyleBackColor = false;
+            btneditprofileadmin.BackColor = Color.Transparent;
+            btneditprofileadmin.BackgroundImage = (Image)resources.GetObject("btneditprofileadmin.BackgroundImage");
+            btneditprofileadmin.FlatAppearance.BorderSize = 0;
+            btneditprofileadmin.FlatStyle = FlatStyle.Flat;
+            btneditprofileadmin.Location = new Point(33, 119);
+            btneditprofileadmin.Name = "btneditprofileadmin";
+            btneditprofileadmin.Size = new Size(112, 29);
+            btneditprofileadmin.TabIndex = 21;
+            btneditprofileadmin.UseVisualStyleBackColor = false;
+            btneditprofileadmin.Click += btneditprofileadmin_Click;
             // 
             // btnlogout
             // 
@@ -192,6 +193,7 @@
             btnlogout.Size = new Size(169, 41);
             btnlogout.TabIndex = 28;
             btnlogout.UseVisualStyleBackColor = false;
+            btnlogout.Click += btnlogout_Click;
             // 
             // btnhistory
             // 
@@ -230,6 +232,7 @@
             btnubahlimit.Size = new Size(114, 29);
             btnubahlimit.TabIndex = 25;
             btnubahlimit.UseVisualStyleBackColor = false;
+            btnubahlimit.Click += btnubahlimit_Click_1;
             // 
             // btnlihatkeluhan
             // 
@@ -257,19 +260,19 @@
             btnkelolauser.UseVisualStyleBackColor = false;
             btnkelolauser.Click += btnkelolauser_Click_1;
             // 
-            // btneditprofile
+            // btndashboardadmin
             // 
-            btneditprofile.BackColor = Color.Transparent;
-            btneditprofile.BackgroundImage = (Image)resources.GetObject("btneditprofile.BackgroundImage");
-            btneditprofile.FlatAppearance.BorderSize = 0;
-            btneditprofile.FlatStyle = FlatStyle.Flat;
-            btneditprofile.ImageAlign = ContentAlignment.MiddleLeft;
-            btneditprofile.Location = new Point(37, 84);
-            btneditprofile.Name = "btneditprofile";
-            btneditprofile.Size = new Size(112, 29);
-            btneditprofile.TabIndex = 22;
-            btneditprofile.UseVisualStyleBackColor = false;
-            btneditprofile.Click += btneditprofile_Click;
+            btndashboardadmin.BackColor = Color.Transparent;
+            btndashboardadmin.BackgroundImage = (Image)resources.GetObject("btndashboardadmin.BackgroundImage");
+            btndashboardadmin.FlatAppearance.BorderSize = 0;
+            btndashboardadmin.FlatStyle = FlatStyle.Flat;
+            btndashboardadmin.ImageAlign = ContentAlignment.MiddleLeft;
+            btndashboardadmin.Location = new Point(37, 84);
+            btndashboardadmin.Name = "btndashboardadmin";
+            btndashboardadmin.Size = new Size(112, 29);
+            btndashboardadmin.TabIndex = 22;
+            btndashboardadmin.UseVisualStyleBackColor = false;
+            btndashboardadmin.Click += btndashboardadmin_Click;
             // 
             // panel4
             // 
@@ -304,17 +307,17 @@
         private Button button1;
         private Panel panel2;
         private Panel panel4;
-        private Button button2;
+        private Button btneditprofileadmin;
         private Button btnlogout;
         private Button btnhistory;
         private Button btnlihatdata;
         private Button btnubahlimit;
         private Button btnlihatkeluhan;
         private Button btnkelolauser;
-        private Button btneditprofile;
+        private Button btndashboardadmin;
         private Button btnsimpan;
         private TextBox textBox2;
         private TextBox textBox1;
-        private Label lblaktif;
+        private Label lblstatusadmin;
     }
 }

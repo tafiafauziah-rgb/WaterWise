@@ -1,4 +1,4 @@
-﻿namespace WaterWise.Models
+﻿namespace WaterWise.Views
 {
     partial class KelolaUser
     {

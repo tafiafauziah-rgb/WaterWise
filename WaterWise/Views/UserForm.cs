@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WaterWise
+namespace WaterWise.Views
 {
     public partial class UserForm : Form
     {

@@ -1,6 +1,7 @@
-﻿namespace WaterWise
+﻿using WaterWise.Views;
+namespace WaterWise.Views
 {
-    partial class AdminForm
+    partial class dashboardadmin : Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,25 +30,25 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboardadmin));
             contextMenuStrip1 = new ContextMenuStrip(components);
             panel1 = new Panel();
+            btneditprofile = new Button();
             btnlogout = new Button();
             panel2 = new Panel();
             panellimitharian = new Panel();
+            labellimitharian = new Label();
             panelpenggunaaktif = new Panel();
+            labelpenggunaaktif = new Label();
             paneltotalpengguna = new Panel();
+            labeltotal = new Label();
             panelheader = new Panel();
             btnhistory = new Button();
             btnlihatdata = new Button();
             btnubahlimit = new Button();
             btnlihatkeluhan = new Button();
             btnkelolauser = new Button();
-            btneditprofile = new Button();
-            labeltotal = new Label();
-            labelpenggunaaktif = new Label();
-            labellimitharian = new Label();
-            button1 = new Button();
+            btndashboard = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panellimitharian.SuspendLayout();
@@ -61,10 +62,11 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // panel1
-            // 
+            //panel1
+
+
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btneditprofile);
             panel1.Controls.Add(btnlogout);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(panelheader);
@@ -73,12 +75,25 @@
             panel1.Controls.Add(btnubahlimit);
             panel1.Controls.Add(btnlihatkeluhan);
             panel1.Controls.Add(btnkelolauser);
-            panel1.Controls.Add(btneditprofile);
+            panel1.Controls.Add(btndashboard);
             panel1.Location = new Point(-15, -7);
             panel1.Name = "panel1";
             panel1.Size = new Size(821, 457);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint_1;
+
+            //btneditprofile
+            // 
+            btneditprofile.BackColor = Color.Transparent;
+            btneditprofile.BackgroundImage = (Image)resources.GetObject("btneditprofile.BackgroundImage");
+            btneditprofile.FlatAppearance.BorderSize = 0;
+            btneditprofile.FlatStyle = FlatStyle.Flat;
+            btneditprofile.Location = new Point(37, 121);
+            btneditprofile.Name = "btneditprofile";
+            btneditprofile.Size = new Size(112, 29);
+            btneditprofile.TabIndex = 3;
+            btneditprofile.UseVisualStyleBackColor = false;
+            btneditprofile.Click += btneditprofile_Click;
             // 
             // btnlogout
             // 
@@ -91,7 +106,7 @@
             btnlogout.Size = new Size(173, 41);
             btnlogout.TabIndex = 20;
             btnlogout.UseVisualStyleBackColor = false;
-            btnlogout.Click += btnlogout_Click_1;
+            btnlogout.Click += btnlogout_Click;
             // 
             // panel2
             // 
@@ -115,6 +130,15 @@
             panellimitharian.Size = new Size(141, 125);
             panellimitharian.TabIndex = 2;
             // 
+            // labellimitharian
+            // 
+            labellimitharian.AutoSize = true;
+            labellimitharian.Location = new Point(13, 74);
+            labellimitharian.Name = "labellimitharian";
+            labellimitharian.Size = new Size(44, 20);
+            labellimitharian.TabIndex = 2;
+            labellimitharian.Text = "value";
+            // 
             // panelpenggunaaktif
             // 
             panelpenggunaaktif.BackColor = Color.Transparent;
@@ -126,6 +150,15 @@
             panelpenggunaaktif.TabIndex = 2;
             panelpenggunaaktif.Paint += panel4_Paint;
             // 
+            // labelpenggunaaktif
+            // 
+            labelpenggunaaktif.AutoSize = true;
+            labelpenggunaaktif.Location = new Point(19, 70);
+            labelpenggunaaktif.Name = "labelpenggunaaktif";
+            labelpenggunaaktif.Size = new Size(44, 20);
+            labelpenggunaaktif.TabIndex = 1;
+            labelpenggunaaktif.Text = "value";
+            // 
             // paneltotalpengguna
             // 
             paneltotalpengguna.BackColor = Color.Transparent;
@@ -135,6 +168,15 @@
             paneltotalpengguna.Name = "paneltotalpengguna";
             paneltotalpengguna.Size = new Size(138, 125);
             paneltotalpengguna.TabIndex = 1;
+            // 
+            // labeltotal
+            // 
+            labeltotal.AutoSize = true;
+            labeltotal.Location = new Point(22, 74);
+            labeltotal.Name = "labeltotal";
+            labeltotal.Size = new Size(44, 20);
+            labeltotal.TabIndex = 0;
+            labeltotal.Text = "value";
             // 
             // panelheader
             // 
@@ -146,16 +188,17 @@
             // 
             // btnhistory
             // 
-            btnhistory.BackColor = Color.Transparent;
-            btnhistory.BackgroundImage = (Image)resources.GetObject("btnhistory.BackgroundImage");
-            btnhistory.FlatAppearance.BorderSize = 0;
-            btnhistory.FlatStyle = FlatStyle.Flat;
-            btnhistory.Location = new Point(27, 296);
-            btnhistory.Name = "btnhistory";
-            btnhistory.Size = new Size(136, 31);
-            btnhistory.TabIndex = 19;
-            btnhistory.UseVisualStyleBackColor = false;
-            // 
+            //btnhistory.BackColor = Color.Transparent;
+            //btnhistory.BackgroundImage = (Image)resources.GetObject("btnhistory.BackgroundImage");
+            //btnhistory.FlatAppearance.BorderSize = 0;
+            //btnhistory.FlatStyle = FlatStyle.Flat;
+            //btnhistory.Location = new Point(27, 296);
+            //btnhistory.Name = "btnhistory";
+            //btnhistory.Size = new Size(136, 31);
+            //btnhistory.TabIndex = 19;
+            //btnhistory.UseVisualStyleBackColor = false;
+            //btnhistory.Click += btnhistory_Click;
+            //// 
             // btnlihatdata
             // 
             btnlihatdata.BackColor = Color.Transparent;
@@ -167,7 +210,7 @@
             btnlihatdata.Size = new Size(114, 29);
             btnlihatdata.TabIndex = 18;
             btnlihatdata.UseVisualStyleBackColor = false;
-            btnlihatdata.Click += btnlihatdata_Click_1;
+            btnlihatdata.Click += btnlihatdata_Click;
             // 
             // btnubahlimit
             // 
@@ -180,6 +223,7 @@
             btnubahlimit.Size = new Size(114, 29);
             btnubahlimit.TabIndex = 17;
             btnubahlimit.UseVisualStyleBackColor = false;
+            btnubahlimit.Click += btnubahlimit_Click_1;
             // 
             // btnlihatkeluhan
             // 
@@ -192,7 +236,7 @@
             btnlihatkeluhan.Size = new Size(114, 29);
             btnlihatkeluhan.TabIndex = 15;
             btnlihatkeluhan.UseVisualStyleBackColor = false;
-            btnlihatkeluhan.Click += btnlihatkeluhan_Click_1;
+            btnlihatkeluhan.Click += btnlihatkeluhan_Click;
             // 
             // btnkelolauser
             // 
@@ -205,62 +249,23 @@
             btnkelolauser.Size = new Size(118, 29);
             btnkelolauser.TabIndex = 16;
             btnkelolauser.UseVisualStyleBackColor = false;
+            btnkelolauser.Click += btnkelolauser_Click;
             // 
-            // btneditprofile
-            // 
-            btneditprofile.BackColor = Color.Transparent;
-            btneditprofile.BackgroundImage = (Image)resources.GetObject("btneditprofile.BackgroundImage");
-            btneditprofile.FlatAppearance.BorderSize = 0;
-            btneditprofile.FlatStyle = FlatStyle.Flat;
-            btneditprofile.ImageAlign = ContentAlignment.MiddleLeft;
-            btneditprofile.Location = new Point(37, 86);
-            btneditprofile.Name = "btneditprofile";
-            btneditprofile.Size = new Size(112, 29);
-            btneditprofile.TabIndex = 14;
-            btneditprofile.UseVisualStyleBackColor = false;
-            btneditprofile.Click += btneditprofile_Click_1;
-            // 
-            // labeltotal
-            // 
-            labeltotal.AutoSize = true;
-            labeltotal.Location = new Point(22, 74);
-            labeltotal.Name = "labeltotal";
-            labeltotal.Size = new Size(44, 20);
-            labeltotal.TabIndex = 0;
-            labeltotal.Text = "value";
-            // 
-            // labelpenggunaaktif
-            // 
-            labelpenggunaaktif.AutoSize = true;
-            labelpenggunaaktif.Location = new Point(19, 70);
-            labelpenggunaaktif.Name = "labelpenggunaaktif";
-            labelpenggunaaktif.Size = new Size(44, 20);
-            labelpenggunaaktif.TabIndex = 1;
-            labelpenggunaaktif.Text = "value";
-            // 
-            // labellimitharian
-            // 
-            labellimitharian.AutoSize = true;
-            labellimitharian.Location = new Point(13, 74);
-            labellimitharian.Name = "labellimitharian";
-            labellimitharian.Size = new Size(44, 20);
-            labellimitharian.TabIndex = 2;
-            labellimitharian.Text = "value";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(37, 121);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 29);
-            button1.TabIndex = 3;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // AdminForm
+            //// btndashboard
+            //// 
+            //btndashboard.BackColor = Color.Transparent;
+            btndashboard.BackgroundImage = (Image)resources.GetObject("btndashboard.BackgroundImage");
+            btndashboard.FlatAppearance.BorderSize = 0;
+            btndashboard.FlatStyle = FlatStyle.Flat;
+            btndashboard.ImageAlign = ContentAlignment.MiddleLeft;
+            btndashboard.Location = new Point(37, 86);
+            btndashboard.Name = "btndashboard";
+            btndashboard.Size = new Size(112, 29);
+            btndashboard.TabIndex = 14;
+            btndashboard.UseVisualStyleBackColor = false;
+            btndashboard.Click += btndashboard_Click;
+
+            //AdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -289,7 +294,7 @@
         private Button btnubahlimit;
         private Button btnlihatkeluhan;
         private Button btnkelolauser;
-        private Button btneditprofile;
+        private Button btndashboard;
         private Panel panelheader;
         private Panel panel2;
         private Panel panellimitharian;
@@ -298,6 +303,6 @@
         private Label labellimitharian;
         private Label labelpenggunaaktif;
         private Label labeltotal;
-        private Button button1;
+        private Button btneditprofile;
     }
 }

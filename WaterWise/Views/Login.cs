@@ -1,6 +1,6 @@
 using WaterWise.Controller;
 
-namespace WaterWise
+namespace WaterWise.Views
 {
     public partial class Login : Form
     {
@@ -49,7 +49,7 @@ namespace WaterWise
             {
                 if (UserController.CurrentUser.role == "admin")
                 {
-                    AdminForm dashboard = new AdminForm();
+                    dashboardadmin dashboard = new dashboardadmin();
                     dashboard.Show();
                     this.Hide();
                 }

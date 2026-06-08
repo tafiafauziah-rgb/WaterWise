@@ -5,8 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
-namespace WaterWise
+using WaterWise.Models;
+namespace WaterWise.Views
 {
     public partial class LihatKeluhan : Form
     {
@@ -41,6 +41,58 @@ namespace WaterWise
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btndashboardadmin_Click(object sender, EventArgs e)
+        {
+            dashboardadmin dashboardaadmin = new dashboardadmin();
+            dashboardaadmin.Show();
+            this.Hide();
+        }
+
+        private void btneditprofile_Click(object sender, EventArgs e)
+        {
+            EditProfile editprofile = new EditProfile();
+            editprofile.Show();
+            this.Hide();
+        }
+
+        private void btnlihatkeluhan_Click(object sender, EventArgs e)
+        {
+            LihatKeluhan lihatkeluhan = new LihatKeluhan();
+            lihatkeluhan.Show();
+            this.Hide();
+        }
+
+        private void btnubahlimit_Click(object sender, EventArgs e)
+        {
+            LihatKeluhan lihatkeluhan = new LihatKeluhan();
+            lihatkeluhan.Show();
+            this.Hide();
+        }
+
+        private void btnkelolauser_Click(object sender, EventArgs e)
+        {
+            KelolaUser kelolaUser = new KelolaUser();
+            kelolaUser.Show();
+            this.Hide();
+        }
+
+        private void btnlihatdata_Click_1(object sender, EventArgs e)
+        {
+            LihatKeluhan lihatkeluhan = new LihatKeluhan();
+            lihatkeluhan.Show();
+            this.Hide();
+        }
+
+        private void btnhistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

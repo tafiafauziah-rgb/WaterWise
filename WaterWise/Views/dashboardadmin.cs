@@ -5,15 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using WaterWise.Models;
-using WaterWise.Views;
 
 
-namespace WaterWise
+namespace WaterWise.Views
 {
-    public partial class AdminForm : Form
+    public partial class dashboardadmin : Form
     {
-        public AdminForm()
+        public dashboardadmin()
         {
             InitializeComponent();
         }
@@ -122,7 +120,9 @@ namespace WaterWise
 
         private void btneditprofile_Click(object sender, EventArgs e)
         {
-            SwicthEditProfile();
+            EditProfile editprofile = new EditProfile();
+            editprofile.Show();
+            this.Hide();
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
@@ -197,12 +197,16 @@ namespace WaterWise
 
         private void btnlihatkeluhan_Click_1(object sender, EventArgs e)
         {
-
+            LihatKeluhan lihatkeluhan = new LihatKeluhan();
+            lihatkeluhan.Show();
+            this.Hide();
         }
 
-        private void btneditprofile_Click_1(object sender, EventArgs e)
+        private void btndashboard_Click(object sender, EventArgs e)
         {
-
+            dashboardadmin forAdmin = new dashboardadmin();
+            forAdmin.Show();
+            this.Hide();
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
@@ -212,12 +216,14 @@ namespace WaterWise
 
         private void btnlihatdata_Click_1(object sender, EventArgs e)
         {
-
+            Lihatdata lihatdata = new Lihatdata();
+            lihatdata.Show();
+            this.Hide();
         }
 
         private void btnlogout_Click_1(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -225,9 +231,31 @@ namespace WaterWise
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btneditprofil_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void btnubahlimit_Click_1(object sender, EventArgs e)
+        {
+            UbahLimit ubahlimit = new UbahLimit();
+            ubahlimit.Show();
+            this.Hide();
+
+        }
+
+        private void btnkelolauser_Click_1(object sender, EventArgs e)
+        {
+            KelolaUser kelolauser = new KelolaUser();
+            kelolauser.Show();
+            this.Hide();
+        }
+
+        //private void btnhistory_Click(object sender, EventArgs e)
+        //{
+        //    HistoryPengguna historypengguna = new HistoryPengguna();
+        //    historypengguna.Show();
+        //    this.Hide();
+        //}
     }
 }

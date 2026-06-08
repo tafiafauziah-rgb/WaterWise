@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WaterWise
+namespace WaterWise.Views
 {
     public partial class UbahLimit : Form
     {
@@ -38,6 +38,13 @@ namespace WaterWise
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btndashboardadmin_Click(object sender, EventArgs e)
+        {
+            dashboardadmin da =  new dashboardadmin();
+            da.Show();
+            this.Hide();
         }
     }
 }

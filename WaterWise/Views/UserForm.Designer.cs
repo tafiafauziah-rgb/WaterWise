@@ -1,4 +1,4 @@
-﻿namespace WaterWise
+﻿namespace WaterWise.Views
 {
     partial class UserForm
     {

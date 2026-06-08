@@ -1,4 +1,4 @@
-﻿namespace WaterWise
+﻿namespace WaterWise.Views
 {
     partial class UbahLimit
     {
@@ -30,13 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UbahLimit));
             panel1 = new Panel();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            txtnamapengguna = new TextBox();
-            txtlimitsaaatini = new TextBox();
-            txtsisalimit = new TextBox();
-            txtlimitbaru = new TextBox();
-            btnsimpanlimit = new Button();
             button2 = new Button();
             btnlogout = new Button();
             btnhistory = new Button();
@@ -45,6 +38,13 @@
             btnlihatkeluhan = new Button();
             btnkelolauser = new Button();
             btneditprofile = new Button();
+            panel3 = new Panel();
+            btnsimpanlimit = new Button();
+            txtlimitbaru = new TextBox();
+            txtsisalimit = new TextBox();
+            txtlimitsaaatini = new TextBox();
+            txtnamapengguna = new TextBox();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -66,73 +66,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(817, 458);
             panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
-            panel2.Location = new Point(192, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(633, 62);
-            panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
-            panel3.Controls.Add(btnsimpanlimit);
-            panel3.Controls.Add(txtlimitbaru);
-            panel3.Controls.Add(txtsisalimit);
-            panel3.Controls.Add(txtlimitsaaatini);
-            panel3.Controls.Add(txtnamapengguna);
-            panel3.Location = new Point(192, 57);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(622, 401);
-            panel3.TabIndex = 1;
-            // 
-            // txtnamapengguna
-            // 
-            txtnamapengguna.Location = new Point(29, 109);
-            txtnamapengguna.Multiline = true;
-            txtnamapengguna.Name = "txtnamapengguna";
-            txtnamapengguna.Size = new Size(511, 32);
-            txtnamapengguna.TabIndex = 0;
-            // 
-            // txtlimitsaaatini
-            // 
-            txtlimitsaaatini.Location = new Point(29, 181);
-            txtlimitsaaatini.Multiline = true;
-            txtlimitsaaatini.Name = "txtlimitsaaatini";
-            txtlimitsaaatini.Size = new Size(111, 21);
-            txtlimitsaaatini.TabIndex = 1;
-            txtlimitsaaatini.TextChanged += textBox2_TextChanged;
-            // 
-            // txtsisalimit
-            // 
-            txtsisalimit.Location = new Point(165, 181);
-            txtsisalimit.Multiline = true;
-            txtsisalimit.Name = "txtsisalimit";
-            txtsisalimit.Size = new Size(111, 21);
-            txtsisalimit.TabIndex = 2;
-            txtsisalimit.TextChanged += textBox3_TextChanged;
-            // 
-            // txtlimitbaru
-            // 
-            txtlimitbaru.Location = new Point(29, 236);
-            txtlimitbaru.Multiline = true;
-            txtlimitbaru.Name = "txtlimitbaru";
-            txtlimitbaru.Size = new Size(111, 21);
-            txtlimitbaru.TabIndex = 3;
-            // 
-            // btnsimpanlimit
-            // 
-            btnsimpanlimit.BackColor = Color.Transparent;
-            btnsimpanlimit.FlatAppearance.BorderSize = 0;
-            btnsimpanlimit.FlatStyle = FlatStyle.Flat;
-            btnsimpanlimit.Location = new Point(29, 335);
-            btnsimpanlimit.Name = "btnsimpanlimit";
-            btnsimpanlimit.Size = new Size(353, 21);
-            btnsimpanlimit.TabIndex = 4;
-            btnsimpanlimit.UseVisualStyleBackColor = false;
-            btnsimpanlimit.Click += button1_Click;
             // 
             // button2
             // 
@@ -221,16 +154,77 @@
             // 
             // btneditprofile
             // 
-            btneditprofile.BackColor = Color.Transparent;
-            btneditprofile.BackgroundImage = (Image)resources.GetObject("btneditprofile.BackgroundImage");
-            btneditprofile.FlatAppearance.BorderSize = 0;
-            btneditprofile.FlatStyle = FlatStyle.Flat;
-            btneditprofile.ImageAlign = ContentAlignment.MiddleLeft;
-            btneditprofile.Location = new Point(37, 87);
+            btneditprofile.Location = new Point(0, 0);
             btneditprofile.Name = "btneditprofile";
-            btneditprofile.Size = new Size(112, 29);
-            btneditprofile.TabIndex = 38;
-            btneditprofile.UseVisualStyleBackColor = false;
+            btneditprofile.Size = new Size(75, 23);
+            btneditprofile.TabIndex = 45;
+            // 
+            // panel3
+            // 
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.Controls.Add(btnsimpanlimit);
+            panel3.Controls.Add(txtlimitbaru);
+            panel3.Controls.Add(txtsisalimit);
+            panel3.Controls.Add(txtlimitsaaatini);
+            panel3.Controls.Add(txtnamapengguna);
+            panel3.Location = new Point(192, 57);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(622, 401);
+            panel3.TabIndex = 1;
+            // 
+            // btnsimpanlimit
+            // 
+            btnsimpanlimit.BackColor = Color.Transparent;
+            btnsimpanlimit.FlatAppearance.BorderSize = 0;
+            btnsimpanlimit.FlatStyle = FlatStyle.Flat;
+            btnsimpanlimit.Location = new Point(29, 335);
+            btnsimpanlimit.Name = "btnsimpanlimit";
+            btnsimpanlimit.Size = new Size(353, 21);
+            btnsimpanlimit.TabIndex = 4;
+            btnsimpanlimit.UseVisualStyleBackColor = false;
+            btnsimpanlimit.Click += button1_Click;
+            // 
+            // txtlimitbaru
+            // 
+            txtlimitbaru.Location = new Point(29, 236);
+            txtlimitbaru.Multiline = true;
+            txtlimitbaru.Name = "txtlimitbaru";
+            txtlimitbaru.Size = new Size(111, 21);
+            txtlimitbaru.TabIndex = 3;
+            // 
+            // txtsisalimit
+            // 
+            txtsisalimit.Location = new Point(165, 181);
+            txtsisalimit.Multiline = true;
+            txtsisalimit.Name = "txtsisalimit";
+            txtsisalimit.Size = new Size(111, 21);
+            txtsisalimit.TabIndex = 2;
+            txtsisalimit.TextChanged += textBox3_TextChanged;
+            // 
+            // txtlimitsaaatini
+            // 
+            txtlimitsaaatini.Location = new Point(29, 181);
+            txtlimitsaaatini.Multiline = true;
+            txtlimitsaaatini.Name = "txtlimitsaaatini";
+            txtlimitsaaatini.Size = new Size(111, 21);
+            txtlimitsaaatini.TabIndex = 1;
+            txtlimitsaaatini.TextChanged += textBox2_TextChanged;
+            // 
+            // txtnamapengguna
+            // 
+            txtnamapengguna.Location = new Point(29, 109);
+            txtnamapengguna.Multiline = true;
+            txtnamapengguna.Name = "txtnamapengguna";
+            txtnamapengguna.Size = new Size(511, 32);
+            txtnamapengguna.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.Location = new Point(192, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(633, 62);
+            panel2.TabIndex = 0;
             // 
             // UbahLimit
             // 

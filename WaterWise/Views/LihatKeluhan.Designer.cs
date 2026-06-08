@@ -1,4 +1,4 @@
-﻿namespace WaterWise
+﻿namespace WaterWise.Views
 {
     partial class LihatKeluhan
     {
@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LihatKeluhan));
             panel1 = new Panel();
             panel3 = new Panel();
-            button2 = new Button();
+            btneditprofile = new Button();
             btnlogout = new Button();
             btnhistory = new Button();
             btnlihatdata = new Button();
             btnubahlimit = new Button();
             btnlihatkeluhan = new Button();
             btnkelolauser = new Button();
-            btneditprofile = new Button();
+            btndashboardadmin = new Button();
             panelheader = new Panel();
             panel2 = new Panel();
             panel4 = new Panel();
@@ -63,14 +63,14 @@
             // panel3
             // 
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
-            panel3.Controls.Add(button2);
+            panel3.Controls.Add(btneditprofile);
             panel3.Controls.Add(btnlogout);
             panel3.Controls.Add(btnhistory);
             panel3.Controls.Add(btnlihatdata);
             panel3.Controls.Add(btnubahlimit);
             panel3.Controls.Add(btnlihatkeluhan);
             panel3.Controls.Add(btnkelolauser);
-            panel3.Controls.Add(btneditprofile);
+            panel3.Controls.Add(btndashboardadmin);
             panel3.Controls.Add(panelheader);
             panel3.Controls.Add(panel2);
             panel3.Location = new Point(-11, 3);
@@ -78,17 +78,18 @@
             panel3.Size = new Size(812, 445);
             panel3.TabIndex = 12;
             // 
-            // button2
+            // btneditprofile
             // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(31, 115);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 29);
-            button2.TabIndex = 29;
-            button2.UseVisualStyleBackColor = false;
+            btneditprofile.BackColor = Color.Transparent;
+            btneditprofile.BackgroundImage = (Image)resources.GetObject("btneditprofile.BackgroundImage");
+            btneditprofile.FlatAppearance.BorderSize = 0;
+            btneditprofile.FlatStyle = FlatStyle.Flat;
+            btneditprofile.Location = new Point(31, 115);
+            btneditprofile.Name = "btneditprofile";
+            btneditprofile.Size = new Size(112, 29);
+            btneditprofile.TabIndex = 29;
+            btneditprofile.UseVisualStyleBackColor = false;
+            btneditprofile.Click += btneditprofile_Click;
             // 
             // btnlogout
             // 
@@ -113,6 +114,7 @@
             btnhistory.Size = new Size(151, 31);
             btnhistory.TabIndex = 35;
             btnhistory.UseVisualStyleBackColor = false;
+            btnhistory.Click += btnhistory_Click;
             // 
             // btnlihatdata
             // 
@@ -125,6 +127,7 @@
             btnlihatdata.Size = new Size(114, 29);
             btnlihatdata.TabIndex = 34;
             btnlihatdata.UseVisualStyleBackColor = false;
+            btnlihatdata.Click += btnlihatdata_Click_1;
             // 
             // btnubahlimit
             // 
@@ -137,6 +140,7 @@
             btnubahlimit.Size = new Size(114, 29);
             btnubahlimit.TabIndex = 33;
             btnubahlimit.UseVisualStyleBackColor = false;
+            btnubahlimit.Click += btnubahlimit_Click;
             // 
             // btnlihatkeluhan
             // 
@@ -149,6 +153,7 @@
             btnlihatkeluhan.Size = new Size(114, 29);
             btnlihatkeluhan.TabIndex = 31;
             btnlihatkeluhan.UseVisualStyleBackColor = false;
+            btnlihatkeluhan.Click += btnlihatkeluhan_Click;
             // 
             // btnkelolauser
             // 
@@ -161,19 +166,21 @@
             btnkelolauser.Size = new Size(118, 29);
             btnkelolauser.TabIndex = 32;
             btnkelolauser.UseVisualStyleBackColor = false;
+            btnkelolauser.Click += btnkelolauser_Click;
             // 
-            // btneditprofile
+            // btndashboardadmin
             // 
-            btneditprofile.BackColor = Color.Transparent;
-            btneditprofile.BackgroundImage = (Image)resources.GetObject("btneditprofile.BackgroundImage");
-            btneditprofile.FlatAppearance.BorderSize = 0;
-            btneditprofile.FlatStyle = FlatStyle.Flat;
-            btneditprofile.ImageAlign = ContentAlignment.MiddleLeft;
-            btneditprofile.Location = new Point(31, 80);
-            btneditprofile.Name = "btneditprofile";
-            btneditprofile.Size = new Size(112, 29);
-            btneditprofile.TabIndex = 30;
-            btneditprofile.UseVisualStyleBackColor = false;
+            btndashboardadmin.BackColor = Color.Transparent;
+            btndashboardadmin.BackgroundImage = (Image)resources.GetObject("btndashboardadmin.BackgroundImage");
+            btndashboardadmin.FlatAppearance.BorderSize = 0;
+            btndashboardadmin.FlatStyle = FlatStyle.Flat;
+            btndashboardadmin.ImageAlign = ContentAlignment.MiddleLeft;
+            btndashboardadmin.Location = new Point(31, 80);
+            btndashboardadmin.Name = "btndashboardadmin";
+            btndashboardadmin.Size = new Size(112, 29);
+            btndashboardadmin.TabIndex = 30;
+            btndashboardadmin.UseVisualStyleBackColor = false;
+            btndashboardadmin.Click += btndashboardadmin_Click;
             // 
             // panelheader
             // 
@@ -192,6 +199,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(621, 389);
             panel2.TabIndex = 16;
+            panel2.Paint += panel2_Paint;
             // 
             // panel4
             // 
@@ -206,7 +214,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(126, 188);
+            button1.Location = new Point(163, 143);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
@@ -247,13 +255,13 @@
         private DataGridView dataGridView1;
         private Panel panel4;
         private Button button1;
-        private Button button2;
+        private Button btneditprofile;
         private Button btnlogout;
         private Button btnhistory;
         private Button btnlihatdata;
         private Button btnubahlimit;
         private Button btnlihatkeluhan;
         private Button btnkelolauser;
-        private Button btneditprofile;
+        private Button btndashboardadmin;
     }
 }

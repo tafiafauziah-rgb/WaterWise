@@ -33,8 +33,8 @@
             panel3 = new Panel();
             lblstatusadmin = new Label();
             btnsimpan = new Button();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            tbalamat = new TextBox();
+            tbnotelepon = new TextBox();
             button1 = new Button();
             tbEmail = new TextBox();
             tbUsername = new TextBox();
@@ -68,8 +68,8 @@
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.Controls.Add(lblstatusadmin);
             panel3.Controls.Add(btnsimpan);
-            panel3.Controls.Add(textBox2);
-            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(tbalamat);
+            panel3.Controls.Add(tbnotelepon);
             panel3.Controls.Add(button1);
             panel3.Controls.Add(tbEmail);
             panel3.Controls.Add(tbUsername);
@@ -103,21 +103,21 @@
             btnsimpan.UseVisualStyleBackColor = false;
             btnsimpan.Click += btnsimpan_Click;
             // 
-            // textBox2
+            // tbalamat
             // 
-            textBox2.BackColor = Color.White;
-            textBox2.Location = new Point(16, 284);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(259, 27);
-            textBox2.TabIndex = 20;
+            tbalamat.BackColor = Color.White;
+            tbalamat.Location = new Point(16, 284);
+            tbalamat.Name = "tbalamat";
+            tbalamat.Size = new Size(259, 27);
+            tbalamat.TabIndex = 20;
             // 
-            // textBox1
+            // tbnotelepon
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.Location = new Point(316, 224);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(259, 27);
-            textBox1.TabIndex = 19;
+            tbnotelepon.BackColor = Color.White;
+            tbnotelepon.Location = new Point(316, 224);
+            tbnotelepon.Name = "tbnotelepon";
+            tbnotelepon.Size = new Size(259, 27);
+            tbnotelepon.TabIndex = 19;
             // 
             // button1
             // 
@@ -316,8 +316,8 @@
         private Button btnkelolauser;
         private Button btndashboardadmin;
         private Button btnsimpan;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox tbalamat;
+        private TextBox tbnotelepon;
         private Label lblstatusadmin;
     }
 }

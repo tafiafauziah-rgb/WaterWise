@@ -82,19 +82,26 @@ namespace WaterWise.Views
 
         private void btnlihatdata_Click_1(object sender, EventArgs e)
         {
-            LihatKeluhan lihatkeluhan = new LihatKeluhan();
-            lihatkeluhan.Show();
+            Lihatdata lihatdata = new Lihatdata();
+            lihatdata.Show();
             this.Hide();
         }
 
         private void btnhistory_Click(object sender, EventArgs e)
         {
-
+            HistoryPengguna historypengguna = new HistoryPengguna();
+            historypengguna.Show();
+            this.Hide();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

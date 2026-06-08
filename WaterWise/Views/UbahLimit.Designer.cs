@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UbahLimit));
             panel1 = new Panel();
-            button2 = new Button();
+            btndashboardadmin = new Button();
+            btneditprofile = new Button();
             btnlogout = new Button();
             btnhistory = new Button();
             btnlihatdata = new Button();
             btnubahlimit = new Button();
             btnlihatkeluhan = new Button();
             btnkelolauser = new Button();
-            btneditprofile = new Button();
             panel3 = new Panel();
             btnsimpanlimit = new Button();
             txtlimitbaru = new TextBox();
@@ -52,14 +52,14 @@
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btndashboardadmin);
+            panel1.Controls.Add(btneditprofile);
             panel1.Controls.Add(btnlogout);
             panel1.Controls.Add(btnhistory);
             panel1.Controls.Add(btnlihatdata);
             panel1.Controls.Add(btnubahlimit);
             panel1.Controls.Add(btnlihatkeluhan);
             panel1.Controls.Add(btnkelolauser);
-            panel1.Controls.Add(btneditprofile);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(-14, -5);
@@ -67,17 +67,32 @@
             panel1.Size = new Size(817, 458);
             panel1.TabIndex = 0;
             // 
-            // button2
+            // btndashboardadmin
             // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(37, 122);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 29);
-            button2.TabIndex = 37;
-            button2.UseVisualStyleBackColor = false;
+            btndashboardadmin.BackColor = Color.Transparent;
+            btndashboardadmin.BackgroundImage = (Image)resources.GetObject("btndashboardadmin.BackgroundImage");
+            btndashboardadmin.FlatAppearance.BorderSize = 0;
+            btndashboardadmin.FlatStyle = FlatStyle.Flat;
+            btndashboardadmin.ImageAlign = ContentAlignment.MiddleLeft;
+            btndashboardadmin.Location = new Point(43, 87);
+            btndashboardadmin.Name = "btndashboardadmin";
+            btndashboardadmin.Size = new Size(112, 29);
+            btndashboardadmin.TabIndex = 45;
+            btndashboardadmin.UseVisualStyleBackColor = false;
+            btndashboardadmin.Click += btndashboardadmin_Click_1;
+            // 
+            // btneditprofile
+            // 
+            btneditprofile.BackColor = Color.Transparent;
+            btneditprofile.BackgroundImage = (Image)resources.GetObject("btneditprofile.BackgroundImage");
+            btneditprofile.FlatAppearance.BorderSize = 0;
+            btneditprofile.FlatStyle = FlatStyle.Flat;
+            btneditprofile.Location = new Point(37, 122);
+            btneditprofile.Name = "btneditprofile";
+            btneditprofile.Size = new Size(112, 29);
+            btneditprofile.TabIndex = 37;
+            btneditprofile.UseVisualStyleBackColor = false;
+            btneditprofile.Click += btneditprofile_Click;
             // 
             // btnlogout
             // 
@@ -90,6 +105,7 @@
             btnlogout.Size = new Size(169, 41);
             btnlogout.TabIndex = 44;
             btnlogout.UseVisualStyleBackColor = false;
+            btnlogout.Click += btnlogout_Click;
             // 
             // btnhistory
             // 
@@ -102,6 +118,7 @@
             btnhistory.Size = new Size(151, 31);
             btnhistory.TabIndex = 43;
             btnhistory.UseVisualStyleBackColor = false;
+            btnhistory.Click += btnhistory_Click;
             // 
             // btnlihatdata
             // 
@@ -127,6 +144,7 @@
             btnubahlimit.Size = new Size(114, 29);
             btnubahlimit.TabIndex = 41;
             btnubahlimit.UseVisualStyleBackColor = false;
+            btnubahlimit.Click += btnubahlimit_Click;
             // 
             // btnlihatkeluhan
             // 
@@ -139,6 +157,7 @@
             btnlihatkeluhan.Size = new Size(114, 29);
             btnlihatkeluhan.TabIndex = 39;
             btnlihatkeluhan.UseVisualStyleBackColor = false;
+            btnlihatkeluhan.Click += btnlihatkeluhan_Click;
             // 
             // btnkelolauser
             // 
@@ -151,13 +170,7 @@
             btnkelolauser.Size = new Size(118, 29);
             btnkelolauser.TabIndex = 40;
             btnkelolauser.UseVisualStyleBackColor = false;
-            // 
-            // btneditprofile
-            // 
-            btneditprofile.Location = new Point(0, 0);
-            btneditprofile.Name = "btneditprofile";
-            btneditprofile.Size = new Size(75, 23);
-            btneditprofile.TabIndex = 45;
+            btnkelolauser.Click += btnkelolauser_Click;
             // 
             // panel3
             // 
@@ -250,13 +263,13 @@
         private Button btnsimpanlimit;
         private TextBox txtlimitbaru;
         private TextBox txtsisalimit;
-        private Button button2;
+        private Button btneditprofile;
         private Button btnlogout;
         private Button btnhistory;
         private Button btnlihatdata;
         private Button btnubahlimit;
         private Button btnlihatkeluhan;
         private Button btnkelolauser;
-        private Button btneditprofile;
+        private Button btndashboardadmin;
     }
 }

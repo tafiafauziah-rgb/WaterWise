@@ -102,6 +102,7 @@
             btnlogout.Size = new Size(169, 41);
             btnlogout.TabIndex = 36;
             btnlogout.UseVisualStyleBackColor = false;
+            btnlogout.Click += btnlogout_Click;
             // 
             // btnhistory
             // 

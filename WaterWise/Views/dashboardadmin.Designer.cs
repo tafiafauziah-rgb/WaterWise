@@ -43,12 +43,12 @@ namespace WaterWise.Views
             paneltotalpengguna = new Panel();
             labeltotal = new Label();
             panelheader = new Panel();
-            btnhistory = new Button();
             btnlihatdata = new Button();
             btnubahlimit = new Button();
             btnlihatkeluhan = new Button();
             btnkelolauser = new Button();
             btndashboard = new Button();
+            btnhistory = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panellimitharian.SuspendLayout();
@@ -62,15 +62,14 @@ namespace WaterWise.Views
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            //panel1
-
-
+            // panel1
+            // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.Controls.Add(btnhistory);
             panel1.Controls.Add(btneditprofile);
             panel1.Controls.Add(btnlogout);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(panelheader);
-            panel1.Controls.Add(btnhistory);
             panel1.Controls.Add(btnlihatdata);
             panel1.Controls.Add(btnubahlimit);
             panel1.Controls.Add(btnlihatkeluhan);
@@ -81,8 +80,8 @@ namespace WaterWise.Views
             panel1.Size = new Size(821, 457);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint_1;
-
-            //btneditprofile
+            // 
+            // btneditprofile
             // 
             btneditprofile.BackColor = Color.Transparent;
             btneditprofile.BackgroundImage = (Image)resources.GetObject("btneditprofile.BackgroundImage");
@@ -168,6 +167,7 @@ namespace WaterWise.Views
             paneltotalpengguna.Name = "paneltotalpengguna";
             paneltotalpengguna.Size = new Size(138, 125);
             paneltotalpengguna.TabIndex = 1;
+            paneltotalpengguna.Paint += paneltotalpengguna_Paint;
             // 
             // labeltotal
             // 
@@ -186,19 +186,6 @@ namespace WaterWise.Views
             panelheader.Size = new Size(624, 53);
             panelheader.TabIndex = 21;
             // 
-            // btnhistory
-            // 
-            //btnhistory.BackColor = Color.Transparent;
-            //btnhistory.BackgroundImage = (Image)resources.GetObject("btnhistory.BackgroundImage");
-            //btnhistory.FlatAppearance.BorderSize = 0;
-            //btnhistory.FlatStyle = FlatStyle.Flat;
-            //btnhistory.Location = new Point(27, 296);
-            //btnhistory.Name = "btnhistory";
-            //btnhistory.Size = new Size(136, 31);
-            //btnhistory.TabIndex = 19;
-            //btnhistory.UseVisualStyleBackColor = false;
-            //btnhistory.Click += btnhistory_Click;
-            //// 
             // btnlihatdata
             // 
             btnlihatdata.BackColor = Color.Transparent;
@@ -251,9 +238,9 @@ namespace WaterWise.Views
             btnkelolauser.UseVisualStyleBackColor = false;
             btnkelolauser.Click += btnkelolauser_Click;
             // 
-            //// btndashboard
-            //// 
-            //btndashboard.BackColor = Color.Transparent;
+            // btndashboard
+            // 
+            btndashboard.BackColor = Color.Transparent;
             btndashboard.BackgroundImage = (Image)resources.GetObject("btndashboard.BackgroundImage");
             btndashboard.FlatAppearance.BorderSize = 0;
             btndashboard.FlatStyle = FlatStyle.Flat;
@@ -264,14 +251,27 @@ namespace WaterWise.Views
             btndashboard.TabIndex = 14;
             btndashboard.UseVisualStyleBackColor = false;
             btndashboard.Click += btndashboard_Click;
-
-            //AdminForm
+            // 
+            // btnhistory
+            // 
+            btnhistory.BackColor = Color.Transparent;
+            btnhistory.BackgroundImage = (Image)resources.GetObject("btnhistory.BackgroundImage");
+            btnhistory.FlatAppearance.BorderSize = 0;
+            btnhistory.FlatStyle = FlatStyle.Flat;
+            btnhistory.Location = new Point(27, 296);
+            btnhistory.Name = "btnhistory";
+            btnhistory.Size = new Size(151, 31);
+            btnhistory.TabIndex = 28;
+            btnhistory.UseVisualStyleBackColor = false;
+            btnhistory.Click += btnhistory_Click_1;
+            // 
+            // dashboardadmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Name = "AdminForm";
+            Name = "dashboardadmin";
             Text = "lblpiihmenu";
             Load += AdminForm_Load_1;
             panel1.ResumeLayout(false);
@@ -289,7 +289,6 @@ namespace WaterWise.Views
         private ContextMenuStrip contextMenuStrip1;
         private Panel panel1;
         private Button btnlogout;
-        private Button btnhistory;
         private Button btnlihatdata;
         private Button btnubahlimit;
         private Button btnlihatkeluhan;
@@ -304,5 +303,6 @@ namespace WaterWise.Views
         private Label labelpenggunaaktif;
         private Label labeltotal;
         private Button btneditprofile;
+        private Button btnhistory;
     }
 }

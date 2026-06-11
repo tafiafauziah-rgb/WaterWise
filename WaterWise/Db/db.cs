@@ -11,7 +11,7 @@ namespace WaterWise.Db
         {
 
             string connString = "Host=localhost;Username=postgres;Password=Tafiahikmah03;Database=WaterWise";
-            return new NpgsqlConnection();
+            return new NpgsqlConnection(connString);
         }
     }
 }

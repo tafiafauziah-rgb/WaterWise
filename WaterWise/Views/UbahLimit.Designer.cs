@@ -190,7 +190,7 @@
             btnsimpanlimit.BackColor = Color.Transparent;
             btnsimpanlimit.FlatAppearance.BorderSize = 0;
             btnsimpanlimit.FlatStyle = FlatStyle.Flat;
-            btnsimpanlimit.Location = new Point(29, 335);
+            btnsimpanlimit.Location = new Point(29, 333);
             btnsimpanlimit.Name = "btnsimpanlimit";
             btnsimpanlimit.Size = new Size(353, 21);
             btnsimpanlimit.TabIndex = 4;

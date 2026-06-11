@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WaterWise.Controller
 {
-    internal class LoginAuthControl
+    internal class LoginController
     {
         public bool Login(string username, string password)
         {

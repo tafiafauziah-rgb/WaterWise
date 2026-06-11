@@ -26,24 +26,22 @@ namespace WaterWise.Views
         private void EditProfile_Load(object sender, EventArgs e)
         {
             // Membuat simulasi objek data dari class Akun
-            currentAdmin = new Akun
+            currentAdmin = new admin()
             {
                 Nama = "Syafia Hikmah Fauziah",
                 Username = "admin_syafia",
                 Email = "syafia@waterwise.com",
                 Telepon = "081234567890",
                 Alamat = "Jl. Merdeka No. 45, Bandung",
-                IsActive = true
             };
 
-            lblstatusadmin.Text = currentAdmin.IsActive ? "Aktif" : "Non-Aktif";
-            lblstatusadmin.ForeColor = currentAdmin.IsActive ? Color.Green : Color.Red;
+            //lblstatusadmin.Text = currentAdmin.IsActive ? "Aktif" : "Non-Aktif";
+            //lblstatusadmin.ForeColor = currentAdmin.IsActive ? Color.Green : Color.Red;
 
             tbNama.Text = currentAdmin.Nama;
             tbUsername.Text = currentAdmin.Username;
             tbEmail.Text = currentAdmin.Email;
             tbnotelepon.Text = currentAdmin.Telepon;
-            tbalamat.Text = currentAdmin.Alamat;
         }
         private void btnsimpan_Click(object sender, EventArgs e)
         {
@@ -60,7 +58,6 @@ namespace WaterWise.Views
                 currentAdmin.Username = tbUsername.Text;
                 currentAdmin.Email = tbEmail.Text;
                 currentAdmin.Telepon = tbnotelepon.Text;
-                currentAdmin.Alamat = tbalamat.Text;
 
                 MessageBox.Show("Profil Admin berhasil diperbarui!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

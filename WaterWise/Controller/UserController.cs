@@ -15,46 +15,62 @@ namespace WaterWise.Controller
             db database = new db();
             connstrig = db.getConn().ConnectionString;
         }
-        internal static Akun? CurrentUser { get; set; }
+        internal static admin? CurrentAdmin { get; set; }
+        internal static users? CurrentUser { get; set; }
         public string Login(string username, string password)
         {
-            try
+            string query = @"SELECT a.*, u.no_kk, u.jumlah_anggota, adm.id_admin
+                     FROM public.Akun a
+                     LEFT JOIN public.users u ON a.id_akun = u.id_user
+                     LEFT JOIN public.admin adm ON a.id_akun = adm.id_admin
+                     WHERE a.username = @u AND a.password = @p LIMIT 1";
+
+            using var conn = new NpgsqlConnection(connstrig);
+            conn.Open();
+            using var cmd = new NpgsqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("u", username);
+            cmd.Parameters.AddWithValue("p", password);
+
+            using var reader = cmd.ExecuteReader();
+            if (reader.Read())
             {
-
-                string query = "SELECT * FROM users WHERE username=@u AND password=@p LIMIT 1";
-                using var conn = new NpgsqlConnection(connstrig);
-                conn.Open();
-                using var cmd = new NpgsqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("u", username);
-                cmd.Parameters.AddWithValue("p", password);
-
-
-                var reader = cmd.ExecuteReader();
-                if (reader.Read())
+                // Cek apakah data yang ditarik memiliki No KK (User biasa) atau tidak (Admin)
+                if (reader["no_kk"] == DBNull.Value || string.IsNullOrEmpty(reader["no_kk"].ToString()))
                 {
-                    Akun akun = new Akun();
-                    {
-                        akun.username = reader.GetString(1);
-                        akun.password = reader.GetString(2);
-                        akun.email = reader.GetString(3);
-                        akun.role = akun.username == "admin" ? "admin" : "user";
-                        akun.nama_lengkap = reader.GetString(5);
+                    var akunAdmin = new WaterWise.Models.admin();
 
-                        CurrentUser = akun;
+                    akunAdmin.Id_akun = Convert.ToInt32(reader["id_akun"]);
+                    akunAdmin.Username = reader["username"].ToString();
+                    akunAdmin.Password = reader["password"].ToString();
+                    akunAdmin.Nama = reader["nama"].ToString();
+                    akunAdmin.Telepon = reader["no_telepon"].ToString();
+                    akunAdmin.Status = reader["status"].ToString();
+                    akunAdmin.Alamat = reader["alamat"].ToString();
 
-                        return "Login Berhasil";
-                    }
-                    ;
+                    CurrentAdmin = akunAdmin;
+                    CurrentUser = null; // Menghapus sisa session user sebelumnya
                 }
                 else
                 {
-                    return "Login Gagal";
+                    var akunUser = new WaterWise.Models.users();
+
+                    akunUser.Id_akun = Convert.ToInt32(reader["id_akun"]);
+                    akunUser.Username = reader["username"].ToString();
+                    akunUser.Password = reader["password"].ToString();
+                    akunUser.Nama = reader["nama"].ToString();
+                    akunUser.Telepon = reader["no_telepon"].ToString();
+                    akunUser.no_kk = reader["no_kk"].ToString();
+
+                    CurrentUser = akunUser;
+                    CurrentAdmin = null; // Menghapus sisa session admin sebelumnya
                 }
+
+                return "Login Berhasil"; // Jalur return 1 (Jika akun ditemukan)
             }
-            catch (Exception ex) { MessageBox.Show("Terjadi kesalahan: " + ex.Message); }
-
-            return null;
+            else
+            {
+                return "Login Gagal"; // Jalur return 2 (Jika akun tidak ditemukan)
+            }
         }
-
     }
 }

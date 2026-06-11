@@ -4,13 +4,13 @@ namespace WaterWise.Views
 {
     public partial class Login : Form
     {
-        private LoginAuthControl _authControl;
+        private LoginController _authControl;
         private readonly UserController _userControl;
         public Login()
         {
             InitializeComponent();
             _userControl = new UserController();
-                _authControl = new LoginAuthControl();
+            _authControl = new LoginController();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -27,52 +27,32 @@ namespace WaterWise.Views
         {
 
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            UserController controller = new UserController();
+            string result = controller.Login(txtUsername.Text, txtPassword.Text);
 
-            string usernameinp = txtUsername.Text;
-            string passwordinp = txtPassword.Text;
-            txtPassword.Text = "";
-            txtUsername.Text = "";
-
-            bool loginResult = _authControl.Login(usernameinp, passwordinp);
-
-            if (!loginResult)
-            {
-                MessageBox.Show("Login Gagal! Periksa username dan password Anda.");
-                return;
-            }
-
-            string result = _userControl.Login(usernameinp, passwordinp);
             if (result == "Login Berhasil")
             {
-                if (UserController.CurrentUser.role == "admin")
-                {
-                    dashboardadmin dashboard = new dashboardadmin();
-                    dashboard.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    UserForm dashboard = new UserForm();
-                    dashboard.Show();
-                    this.Hide();
-                    //    }
-                    //if (usernameinp == UserController.CurrentUser.username && passwordinp == UserController.currentuser.password)
-                    //{
-                    //    MessageBox.Show("Login Berhasil!");
-                    //    AdminForm dashboard = new AdminForm();
-                    //    dashboard.Show();
-                    //    this.Hide();
+                this.Hide();
 
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Login Gagal! Periksa username dan password Anda.");
-                    //}
+                if (UserController.CurrentAdmin != null)
+                {
+                    // Yang login adalah Admin → buka DashboardAdmin
+                    new dashboardadmin().Show();
                 }
+                else if (UserController.CurrentUser != null)
+                {
+                    // Yang login adalah User biasa → buka UserForm
+                    new UserForm().Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Username atau password salah!", "Login Gagal",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
-}
+    }
+

@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProfile));
             panel1 = new Panel();
             panel3 = new Panel();
+            btnsimpaneditprofile = new Button();
             lblstatusadmin = new Label();
             btnsimpan = new Button();
-            tbalamat = new TextBox();
             tbnotelepon = new TextBox();
             button1 = new Button();
             tbEmail = new TextBox();
@@ -66,9 +66,9 @@
             // panel3
             // 
             panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.Controls.Add(btnsimpaneditprofile);
             panel3.Controls.Add(lblstatusadmin);
             panel3.Controls.Add(btnsimpan);
-            panel3.Controls.Add(tbalamat);
             panel3.Controls.Add(tbnotelepon);
             panel3.Controls.Add(button1);
             panel3.Controls.Add(tbEmail);
@@ -80,13 +80,25 @@
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
             // 
+            // btnsimpaneditprofile
+            // 
+            btnsimpaneditprofile.BackColor = Color.Transparent;
+            btnsimpaneditprofile.FlatAppearance.BorderSize = 0;
+            btnsimpaneditprofile.FlatStyle = FlatStyle.Flat;
+            btnsimpaneditprofile.Location = new Point(16, 267);
+            btnsimpaneditprofile.Name = "btnsimpaneditprofile";
+            btnsimpaneditprofile.Size = new Size(588, 21);
+            btnsimpaneditprofile.TabIndex = 24;
+            btnsimpaneditprofile.UseVisualStyleBackColor = false;
+            // 
             // lblstatusadmin
             // 
             lblstatusadmin.AutoSize = true;
             lblstatusadmin.BackColor = Color.Transparent;
-            lblstatusadmin.Location = new Point(69, 103);
+            lblstatusadmin.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblstatusadmin.Location = new Point(59, 98);
             lblstatusadmin.Name = "lblstatusadmin";
-            lblstatusadmin.Size = new Size(44, 20);
+            lblstatusadmin.Size = new Size(38, 17);
             lblstatusadmin.TabIndex = 23;
             lblstatusadmin.Text = "value";
             lblstatusadmin.Click += lblstatusadmin_Click;
@@ -102,14 +114,6 @@
             btnsimpan.TabIndex = 21;
             btnsimpan.UseVisualStyleBackColor = false;
             btnsimpan.Click += btnsimpan_Click;
-            // 
-            // tbalamat
-            // 
-            tbalamat.BackColor = Color.White;
-            tbalamat.Location = new Point(16, 284);
-            tbalamat.Name = "tbalamat";
-            tbalamat.Size = new Size(259, 27);
-            tbalamat.TabIndex = 20;
             // 
             // tbnotelepon
             // 
@@ -316,8 +320,8 @@
         private Button btnkelolauser;
         private Button btndashboardadmin;
         private Button btnsimpan;
-        private TextBox tbalamat;
         private TextBox tbnotelepon;
         private Label lblstatusadmin;
+        private Button btnsimpaneditprofile;
     }
 }

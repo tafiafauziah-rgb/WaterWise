@@ -1,0 +1,133 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Forms;  
+using WaterWise.Controller.Admin_by_Izul;
+using WaterWise.Models.Admin;  
+using WaterWise.Views.Admin_by_Izul; 
+using WaterWiseV2.Control.Auth;
+using WaterWiseV2.Model;
+using WaterWiseV2.View.Auth;
+using WaterWiseV2.View.User;
+
+namespace WaterWiseV2.Helper
+{
+    internal class NavigationHelper
+    {
+        // ==================== NAVIGASI USER ====================
+        public static void GoToDashboardUser(M_User user, Form currentForm)
+        {
+            DashboardUser form = new DashboardUser(user);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToAmbilAirUser(M_User user, Form currentForm)
+        {
+            AmbilAirUser form = new AmbilAirUser(user);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToProfileUser(M_User user, Form currentForm)
+        {
+            ProfileUser form = new ProfileUser(user);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToLaporKeluhanUser(M_User user, Form currentForm)
+        {
+            LaporKeluhanUser form = new LaporKeluhanUser(user);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToHistoryUser(M_User user, Form currentForm)
+        {
+            HistoryUser form = new HistoryUser(user);
+            form.Show();
+            currentForm.Close();
+        }
+
+        // ==================== NAVIGASI ADMIN ====================
+        public static void GoToDashboardAdmin(M_Admin admin, Form currentForm)
+        {
+            DashboardAdmin form = new DashboardAdmin(admin);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToProfileAdmin(M_Admin admin, Form currentForm)
+        {
+            ProfileAdmin form = new ProfileAdmin(admin);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToLihatDataUserAdmin(M_Admin admin, Form currentForm)
+        {
+            LihatDataUser form = new LihatDataUser(admin);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToKelolaUserAdmin(M_Admin admin, Form currentForm)
+        {
+            // Form KelolaUserAdmin (walaupun belum jadi, tetap dipanggil)
+            KelolaUserAdmin form = new KelolaUserAdmin(admin);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToLihatKeluhanAdmin(M_Admin admin, Form currentForm)
+        {
+            // Form LihatKeluhanAdmin (walaupun belum jadi, tetap dipanggil)
+            LihatKeluhanAdmin form = new LihatKeluhanAdmin(admin);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToUbahLimitAdmin(M_Admin admin, Form currentForm)
+        {
+            // Form UbahLimitAdmin (walaupun belum jadi, tetap dipanggil)
+            UbahLimitAdmin form = new UbahLimitAdmin(admin);
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToHistoryAdmin(M_Admin admin, Form currentForm)
+        {
+            // Form HistoryAdmin (walaupun belum jadi, tetap dipanggil)
+            HistoryAdmin form = new HistoryAdmin(admin);
+            form.Show();
+            currentForm.Close();
+        }
+
+        // ==================== NAVIGASI UMUM ====================
+        public static void GoToLogin(Form currentForm)
+        {
+            Login form = new Login();
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void GoToRegister(Form currentForm)
+        {
+            Register form = new Register();
+            form.Show();
+            currentForm.Close();
+        }
+
+        public static void Logout(Form currentForm)
+        {
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                GoToLogin(currentForm);
+            }
+        }
+    }
+}
